@@ -194,7 +194,8 @@ textarea {
 .message {
     margin-top: 12px;
     overflow-wrap: anywhere;
-    font-size: 14px;
+    font-size: 15px;
+    font-weight: bold;
 }
 
 .table-wrap {
@@ -284,10 +285,7 @@ footer strong {
 
 <!-- HEADER -->
 <header>
-    <img src="logo.png"
-         class="logo"
-         alt="युवा जनता पार्टी का लोगो">
-
+    <img src="logo.png" class="logo" alt="युवा जनता पार्टी का लोगो">
     <div class="brand">
         <h2>युवा जनता पार्टी</h2>
         <p>सदस्यता एवं संगठन पोर्टल</p>
@@ -305,13 +303,10 @@ footer strong {
 <!-- HOME -->
 <section class="hero" id="home">
     <h1>युवा जनता पार्टी</h1>
-
     <p>
         YJP सदस्यता पोर्टल पर आपका स्वागत है।
-        सदस्यता के लिए आवेदन करें और अपनी सदस्यता की
-        स्थिति जानें।
+        सदस्यता के लिए आवेदन करें और अपनी सदस्यता की स्थिति जानें।
     </p>
-
     <a href="#join" class="btn">सदस्यता आवेदन करें</a>
 </section>
 
@@ -319,7 +314,6 @@ footer strong {
 
 <!-- MEMBERSHIP FORM -->
 <section class="card" id="join">
-
     <h2>📝 सदस्यता आवेदन फॉर्म</h2>
 
     <div class="notice">
@@ -328,44 +322,23 @@ footer strong {
     </div>
 
     <form id="joinForm">
-
         <!-- FULL NAME -->
         <div>
             <label for="name">पूरा नाम *</label>
-            <input
-                id="name"
-                name="name"
-                type="text"
-                maxlength="100"
-                autocomplete="name"
-                required
-                placeholder="अपना पूरा नाम लिखें">
+            <input id="name" name="name" type="text" maxlength="100" autocomplete="name" required placeholder="अपना पूरा नाम लिखें">
         </div>
 
         <!-- MOBILE -->
         <div>
             <label for="phone">मोबाइल नंबर *</label>
-            <input
-                id="phone"
-                name="phone"
-                type="tel"
-                inputmode="numeric"
-                pattern="[0-9]{10}"
-                maxlength="10"
-                autocomplete="tel"
-                required
-                placeholder="10 अंकों का मोबाइल नंबर">
+            <input id="phone" name="phone" type="tel" inputmode="numeric" pattern="[0-9]{10}" maxlength="10" autocomplete="tel" required placeholder="10 अंकों का मोबाइल नंबर">
         </div>
 
         <!-- STATE -->
         <div>
-            <label for="state">
-                राज्य / केंद्रशासित प्रदेश *
-            </label>
-
+            <label for="state">राज्य / केंद्रशासित प्रदेश *</label>
             <select id="state" name="state" required>
                 <option value="">अपना राज्य चुनें</option>
-
                 <optgroup label="राज्य">
                     <option value="Andhra Pradesh">आंध्र प्रदेश</option>
                     <option value="Arunachal Pradesh">अरुणाचल प्रदेश</option>
@@ -396,19 +369,12 @@ footer strong {
                     <option value="Uttarakhand">उत्तराखंड</option>
                     <option value="West Bengal">पश्चिम बंगाल</option>
                 </optgroup>
-
                 <optgroup label="केंद्रशासित प्रदेश">
-                    <option value="Andaman and Nicobar Islands">
-                        अंडमान और निकोबार द्वीपसमूह
-                    </option>
+                    <option value="Andaman and Nicobar Islands">अंडमान और निकोबार द्वीपसमूह</option>
                     <option value="Chandigarh">चंडीगढ़</option>
-                    <option value="Dadra and Nagar Haveli and Daman and Diu">
-                        दादरा और नगर हवेली और दमन और दीव
-                    </option>
+                    <option value="Dadra and Nagar Haveli and Daman and Diu">दादरा और नगर हवेली और दमन और दीव</option>
                     <option value="Delhi">दिल्ली</option>
-                    <option value="Jammu and Kashmir">
-                        जम्मू और कश्मीर
-                    </option>
+                    <option value="Jammu and Kashmir">जम्मू और कश्मीर</option>
                     <option value="Ladakh">लद्दाख</option>
                     <option value="Lakshadweep">लक्षद्वीप</option>
                     <option value="Puducherry">पुडुचेरी</option>
@@ -419,170 +385,89 @@ footer strong {
         <!-- DISTRICT -->
         <div>
             <label for="district">जिला *</label>
-            <input
-                id="district"
-                name="district"
-                type="text"
-                maxlength="100"
-                required
-                placeholder="अपने जिले का नाम लिखें">
+            <input id="district" name="district" type="text" maxlength="100" required placeholder="अपने जिले का नाम लिखें">
         </div>
 
         <!-- ASSEMBLY -->
         <div>
             <label for="assembly">विधानसभा क्षेत्र *</label>
-            <input
-                id="assembly"
-                name="assembly"
-                type="text"
-                maxlength="100"
-                required
-                placeholder="विधानसभा क्षेत्र का नाम">
+            <input id="assembly" name="assembly" type="text" maxlength="100" required placeholder="विधानसभा क्षेत्र का नाम">
         </div>
 
         <!-- PANCHAYAT -->
         <div>
             <label for="panchayat">पंचायत / वार्ड</label>
-            <input
-                id="panchayat"
-                name="panchayat"
-                type="text"
-                maxlength="100"
-                placeholder="पंचायत या वार्ड का नाम">
+            <input id="panchayat" name="panchayat" type="text" maxlength="100" placeholder="पंचायत या वार्ड का नाम">
         </div>
 
         <!-- VILLAGE / CITY -->
         <div>
             <label for="village">गाँव / शहर</label>
-            <input
-                id="village"
-                name="village"
-                type="text"
-                maxlength="100"
-                placeholder="गाँव या शहर का नाम">
+            <input id="village" name="village" type="text" maxlength="100" placeholder="गाँव या शहर का नाम">
         </div>
 
         <!-- REASON -->
         <div class="full">
-            <label for="reason">
-                पार्टी से जुड़ने का कारण (वैकल्पिक)
-            </label>
-
-            <textarea
-                id="reason"
-                name="reason"
-                rows="3"
-                maxlength="500"
-                placeholder="यहाँ लिखें..."></textarea>
+            <label for="reason">पार्टी से जुड़ने का कारण (वैकल्पिक)</label>
+            <textarea id="reason" name="reason" rows="3" maxlength="500" placeholder="यहाँ लिखें..."></textarea>
         </div>
 
         <!-- CONSENT -->
         <div class="full consent">
-            <input
-                type="checkbox"
-                id="consent"
-                name="consent"
-                required>
-
+            <input type="checkbox" id="consent" name="consent" required>
             <label for="consent">
-                मैं सहमत हूँ कि सदस्यता आवेदन की समीक्षा
-                और मुझसे संपर्क करने के लिए मेरी जानकारी
-                का उपयोग किया जा सकता है।
+                मैं सहमत हूँ कि सदस्यता आवेदन की समीक्षा और मुझसे संपर्क करने के लिए मेरी जानकारी का उपयोग किया जा सकता है।
             </label>
         </div>
 
         <!-- SUBMIT -->
         <div class="full">
-            <button type="submit" class="btn">
-                आवेदन जमा करें
-            </button>
-
-            <p
-                id="formMessage"
-                class="message"
-                role="status"
-                aria-live="polite"></p>
-
-            <p class="small-note">
-                आवेदन वास्तव में जमा करने के लिए डेटाबेस कनेक्शन
-                पूरा होना आवश्यक है।
-            </p>
+            <button type="submit" class="btn" id="submitBtn">आवेदन जमा करें</button>
+            <p id="formMessage" class="message" role="status" aria-live="polite"></p>
         </div>
-
     </form>
 </section>
 
 <!-- PUBLIC MEMBERS LIST -->
 <section class="card" id="members">
-
     <h2>👥 सार्वजनिक सदस्य सूची</h2>
-
-    <p>
-        केवल स्वीकृत सदस्यों के नाम और सदस्यता संख्या
-        सार्वजनिक सूची में दिखाई जानी चाहिए।
-    </p>
+    <p>केवल स्वीकृत सदस्यों के नाम और सदस्यता संख्या सार्वजनिक सूची में दिखाई जानी चाहिए।</p>
 
     <div class="table-wrap">
         <table>
             <thead>
                 <tr>
-                    <th>सदस्यता संख्या</th>
+                    <th>सदस्यता संख्या (App ID)</th>
                     <th>नाम</th>
                     <th>जिला</th>
                     <th>स्थिति</th>
                 </tr>
             </thead>
-
             <tbody id="memberList">
                 <tr>
-                    <td colspan="4">
-                        डेटाबेस कनेक्ट होने के बाद स्वीकृत
-                        सदस्यों की सूची यहाँ दिखाई जाएगी।
-                    </td>
+                    <td colspan="4">स्वीकृत सदस्यों की सूची लोड हो रही है...</td>
                 </tr>
             </tbody>
         </table>
     </div>
-
 </section>
 
 <!-- MEMBERSHIP STATUS -->
 <section class="card" id="status">
-
     <h2>🪪 मेरी सदस्यता</h2>
-
-    <p>
-        अपने आवेदन की स्थिति देखने के लिए आवेदन ID दर्ज करें।
-    </p>
+    <p>अपने आवेदन की स्थिति देखने के लिए आवेदन ID दर्ज करें।</p>
 
     <form id="statusForm" style="margin-top:18px">
-
         <div class="full">
             <label for="applicationId">आवेदन ID *</label>
-
-            <input
-                id="applicationId"
-                name="applicationId"
-                type="text"
-                maxlength="100"
-                required
-                placeholder="अपनी आवेदन ID दर्ज करें">
+            <input id="applicationId" name="applicationId" type="text" maxlength="100" required placeholder="अपनी आवेदन ID दर्ज करें">
         </div>
 
         <div class="full">
-            <button type="submit" class="btn">
-                सदस्यता की स्थिति देखें
-            </button>
-
-            <p
-                id="statusMessage"
-                class="message"
-                role="status"
-                aria-live="polite"></p>
+            <button type="submit" class="btn">सदस्यता की स्थिति देखें</button>
+            <p id="statusMessage" class="message" role="status" aria-live="polite"></p>
         </div>
-
     </form>
-
 </section>
 
 </main>
@@ -594,65 +479,134 @@ footer strong {
     <p>© <span id="year"></span> YJP</p>
 </footer>
 
-<script>
-"use strict";
+<!-- FIREBASE SDK & LOGIC -->
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+    import { getFirestore, collection, addDoc, getDoc, doc, query, where, getDocs, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
-document.getElementById("year").textContent =
-    new Date().getFullYear();
+    // आपका फ़ायरबेस कॉन्फ़िगरेशन
+    const firebaseConfig = {
+      apiKey: "AIzaSyCT0pjRKKAFzrHu_0WiLIgcqcLwo0DmVrA",
+      authDomain: "yjp-official.firebaseapp.com",
+      projectId: "yjp-official",
+      storageBucket: "yjp-official.firebasestorage.app",
+      messagingSenderId: "231867917087",
+      appId: "1:231867917087:web:198f04bd272eeffc1ec62a",
+      measurementId: "G-YYEXE72XEX"
+    };
 
-/*
-==================================================
-महत्वपूर्ण जानकारी
+    // फ़ायरबेस इनिशियलाइज़ेशन
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
 
-यह अभी वेबसाइट का फ्रंटएंड है।
+    // फ़ुटर में ऑटोमैटिक करंट ईयर
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-Supabase डेटाबेस कनेक्ट होने तक:
-1. आवेदन डेटाबेस में सेव नहीं होगा।
-2. आवेदन ID अपने आप नहीं बनेगी।
-3. एडमिन अप्रूवल अभी काम नहीं करेगा।
-4. ईमेल नोटिफिकेशन नहीं जाएगा।
-5. सदस्य सूची डेटाबेस से नहीं आएगी।
-6. सदस्यता स्टेटस की वास्तविक जाँच नहीं होगी।
+    // 1. सदस्यता आवेदन फॉर्म जमा करना (Firestore में सेव करना)
+    const joinForm = document.getElementById("joinForm");
+    const formMessage = document.getElementById("formMessage");
+    const submitBtn = document.getElementById("submitBtn");
 
-इन सुविधाओं को चालू करने के लिए सुरक्षित
-Supabase डेटाबेस और सर्वर-साइड सेटअप आवश्यक है।
-==================================================
-*/
+    joinForm.addEventListener("submit", async function(event) {
+        event.preventDefault();
+        
+        formMessage.textContent = "आवेदन भेजा जा रहा है, कृपया प्रतीक्षा करें...";
+        formMessage.style.color = "#075b3c";
+        submitBtn.disabled = true;
 
-// Membership form
-document.getElementById("joinForm").addEventListener(
-    "submit",
-    function(event) {
+        const formData = {
+            name: document.getElementById("name").value.trim(),
+            phone: document.getElementById("phone").value.trim(),
+            state: document.getElementById("state").value,
+            district: document.getElementById("district").value.trim(),
+            assembly: document.getElementById("assembly").value.trim(),
+            panchayat: document.getElementById("panchayat").value.trim(),
+            village: document.getElementById("village").value.trim(),
+            reason: document.getElementById("reason").value.trim(),
+            status: "Pending", // शुरुआत में स्थिति 'लंबित' (Pending) रहेगी
+            createdAt: serverTimestamp()
+        };
+
+        try {
+            const docRef = await addDoc(collection(db, "members"), formData);
+            formMessage.innerHTML = `सफलतापूर्वक आवेदन जमा हुआ! <br> आपकी <strong>आवेदन ID: ${docRef.id}</strong> है। इसे सुरक्षित रख लें।`;
+            formMessage.style.color = "green";
+            joinForm.reset();
+        } catch (error) {
+            console.error("Error submitting form: ", error);
+            formMessage.textContent = "आवेदन जमा करने में समस्या आई। कृपया फिर प्रयास करें।";
+            formMessage.style.color = "#a33b20";
+        } finally {
+            submitBtn.disabled = false;
+        }
+    });
+
+    // 2. मेरी सदस्यता की स्थिति जांचना (Check Application Status)
+    const statusForm = document.getElementById("statusForm");
+    const statusMessage = document.getElementById("statusMessage");
+
+    statusForm.addEventListener("submit", async function(event) {
         event.preventDefault();
 
-        const message =
-            document.getElementById("formMessage");
+        const appId = document.getElementById("applicationId").value.trim();
+        statusMessage.textContent = "जाँच की जा रही है...";
+        statusMessage.style.color = "#075b3c";
 
-        message.textContent =
-            "आपका आवेदन अभी जमा नहीं हुआ है। " +
-            "आवेदन सेव करने के लिए वेबसाइट का डेटाबेस " +
-            "कनेक्ट करना आवश्यक है।";
+        try {
+            const docRef = doc(db, "members", appId);
+            const docSnap = await getDoc(docRef);
 
-        message.style.color = "#a33b20";
+            if (docSnap.exists()) {
+                const data = docSnap.data();
+                let statusText = data.status === "Approved" ? "स्वीकृत (Approved)" : "समीक्षाधीन / लंबित (Pending)";
+                let statusColor = data.status === "Approved" ? "green" : "#d97706";
+
+                statusMessage.innerHTML = `नाम: <strong>${data.name}</strong> <br> स्थिति: <span style="color:${statusColor}">${statusText}</span>`;
+            } else {
+                statusMessage.textContent = "गलत आवेदन ID। कोई रिकॉर्ड नहीं मिला।";
+                statusMessage.style.color = "#a33b20";
+            }
+        } catch (error) {
+            console.error("Error fetching status: ", error);
+            statusMessage.textContent = "स्थिति जाँचने में त्रुटि हुई।";
+            statusMessage.style.color = "#a33b20";
+        }
+    });
+
+    // 3. स्वीकृत (Approved) सदस्यों की सूची लोड करना
+    async function loadApprovedMembers() {
+        const memberList = document.getElementById("memberList");
+        try {
+            const q = query(collection(db, "members"), where("status", "==", "Approved"));
+            const querySnapshot = await getDocs(q);
+
+            if (querySnapshot.empty) {
+                memberList.innerHTML = `<tr><td colspan="4">अभी कोई स्वीकृत सदस्य नहीं है।</td></tr>`;
+                return;
+            }
+
+            let rows = "";
+            querySnapshot.forEach((doc) => {
+                const member = doc.data();
+                rows += `
+                    <tr>
+                        <td>${doc.id}</td>
+                        <td>${member.name}</td>
+                        <td>${member.district}</td>
+                        <td><span style="color:green; font-weight:bold;">स्वीकृत</span></td>
+                    </tr>
+                `;
+            });
+
+            memberList.innerHTML = rows;
+        } catch (error) {
+            console.error("Error loading members: ", error);
+            memberList.innerHTML = `<tr><td colspan="4">सदस्य सूची लोड करने में समस्या आई।</td></tr>`;
+        }
     }
-);
 
-// Membership status form
-document.getElementById("statusForm").addEventListener(
-    "submit",
-    function(event) {
-        event.preventDefault();
-
-        const message =
-            document.getElementById("statusMessage");
-
-        message.textContent =
-            "सदस्यता की स्थिति जाँचने के लिए " +
-            "डेटाबेस कनेक्शन पूरा करना आवश्यक है।";
-
-        message.style.color = "#a33b20";
-    }
-);
+    // पेज खुलते ही सदस्य सूची लोड करें
+    loadApprovedMembers();
 </script>
 
 </body>
