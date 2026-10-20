@@ -4,7 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>YJP | युवा जनता पार्टी</title>
+<title>YJP | युवा जनता पार्टी सदस्यता पोर्टल</title>
+
+<meta name="description" content="युवा जनता पार्टी का सदस्यता पोर्टल। सदस्यता के लिए आवेदन करें और अपनी सदस्यता की स्थिति जानें।">
 
 <style>
 * {
@@ -13,10 +15,15 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, "Noto Sans Devanagari", sans-serif;
     background: #f0f6f2;
     color: #173b2b;
+    line-height: 1.6;
 }
 
 header {
@@ -39,7 +46,7 @@ header {
 
 .brand h2 {
     color: #d9f99d;
-    font-size: 20px;
+    font-size: 21px;
 }
 
 .brand p {
@@ -62,6 +69,10 @@ nav a {
     font-weight: bold;
 }
 
+nav a:hover {
+    color: #d9f99d;
+}
+
 .hero {
     background: linear-gradient(120deg, #023b2b, #08764b);
     color: white;
@@ -75,17 +86,25 @@ nav a {
 }
 
 .hero p {
-    margin-bottom: 22px;
+    max-width: 650px;
+    margin: 0 auto 22px;
 }
 
 .btn {
+    display: inline-block;
     background: #d9f99d;
     color: #064e32;
     padding: 12px 18px;
     border: none;
     border-radius: 7px;
     font-weight: bold;
+    font-size: 15px;
+    text-decoration: none;
     cursor: pointer;
+}
+
+.btn:hover {
+    background: #c6ed7d;
 }
 
 .container {
@@ -105,6 +124,7 @@ nav a {
 .card h2 {
     color: #075b3c;
     margin-bottom: 15px;
+    font-size: 23px;
 }
 
 .notice {
@@ -128,12 +148,28 @@ label {
     font-weight: bold;
 }
 
-input, textarea {
+input,
+select,
+textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccd9cf;
     border-radius: 7px;
     font-size: 15px;
+    font-family: inherit;
+    color: #173b2b;
+    background: white;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #08764b;
+    border-color: #08764b;
+}
+
+textarea {
+    resize: vertical;
 }
 
 .full {
@@ -148,7 +184,7 @@ input, textarea {
 
 .consent input {
     width: auto;
-    margin-top: 5px;
+    margin-top: 6px;
 }
 
 .consent label {
@@ -158,6 +194,7 @@ input, textarea {
 .message {
     margin-top: 12px;
     overflow-wrap: anywhere;
+    font-size: 14px;
 }
 
 .table-wrap {
@@ -193,13 +230,39 @@ footer strong {
     color: #d9f99d;
 }
 
+.small-note {
+    font-size: 13px;
+    color: #52665a;
+    margin-top: 10px;
+}
+
 @media(max-width:600px) {
+    header {
+        padding: 12px 4%;
+    }
+
+    .brand h2 {
+        font-size: 18px;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
     form {
         grid-template-columns: 1fr;
     }
 
     .full {
         grid-column: auto;
+    }
+
+    .hero {
+        padding: 42px 15px;
     }
 
     .hero h1 {
@@ -209,16 +272,21 @@ footer strong {
     .card {
         padding: 17px;
     }
+
+    .card h2 {
+        font-size: 21px;
+    }
 }
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
-    <!-- अपनी लोगो इमेज का नाम logo.png रखें -->
-    <img src="logo.png" class="logo"
-         alt="युवा जनता पार्टी लोगो">
+    <img src="logo.png"
+         class="logo"
+         alt="युवा जनता पार्टी का लोगो">
 
     <div class="brand">
         <h2>युवा जनता पार्टी</h2>
@@ -226,6 +294,7 @@ footer strong {
     </div>
 </header>
 
+<!-- NAVIGATION -->
 <nav>
     <a href="#home">होम</a>
     <a href="#join">पार्टी जॉइन करें</a>
@@ -233,21 +302,22 @@ footer strong {
     <a href="#status">मेरी सदस्यता</a>
 </nav>
 
+<!-- HOME -->
 <section class="hero" id="home">
     <h1>युवा जनता पार्टी</h1>
 
     <p>
         YJP सदस्यता पोर्टल पर आपका स्वागत है।
-        आवेदन करें और अपनी सदस्यता की स्थिति जानें।
+        सदस्यता के लिए आवेदन करें और अपनी सदस्यता की
+        स्थिति जानें।
     </p>
 
-    <a href="#join">
-        <button class="btn">सदस्यता आवेदन करें</button>
-    </a>
+    <a href="#join" class="btn">सदस्यता आवेदन करें</a>
 </section>
 
 <main class="container">
 
+<!-- MEMBERSHIP FORM -->
 <section class="card" id="join">
 
     <h2>📝 सदस्यता आवेदन फॉर्म</h2>
@@ -259,83 +329,197 @@ footer strong {
 
     <form id="joinForm">
 
+        <!-- FULL NAME -->
         <div>
             <label for="name">पूरा नाम *</label>
-            <input id="name" name="name"
-                   maxlength="100" required>
+            <input
+                id="name"
+                name="name"
+                type="text"
+                maxlength="100"
+                autocomplete="name"
+                required
+                placeholder="अपना पूरा नाम लिखें">
         </div>
 
+        <!-- MOBILE -->
         <div>
             <label for="phone">मोबाइल नंबर *</label>
-            <input id="phone" name="phone"
-                   type="tel" inputmode="numeric"
-                   pattern="[0-9]{10}"
-                   maxlength="10" required
-                   placeholder="10 अंकों का नंबर">
+            <input
+                id="phone"
+                name="phone"
+                type="tel"
+                inputmode="numeric"
+                pattern="[0-9]{10}"
+                maxlength="10"
+                autocomplete="tel"
+                required
+                placeholder="10 अंकों का मोबाइल नंबर">
         </div>
 
+        <!-- STATE -->
+        <div>
+            <label for="state">
+                राज्य / केंद्रशासित प्रदेश *
+            </label>
+
+            <select id="state" name="state" required>
+                <option value="">अपना राज्य चुनें</option>
+
+                <optgroup label="राज्य">
+                    <option value="Andhra Pradesh">आंध्र प्रदेश</option>
+                    <option value="Arunachal Pradesh">अरुणाचल प्रदेश</option>
+                    <option value="Assam">असम</option>
+                    <option value="Bihar">बिहार</option>
+                    <option value="Chhattisgarh">छत्तीसगढ़</option>
+                    <option value="Goa">गोवा</option>
+                    <option value="Gujarat">गुजरात</option>
+                    <option value="Haryana">हरियाणा</option>
+                    <option value="Himachal Pradesh">हिमाचल प्रदेश</option>
+                    <option value="Jharkhand">झारखंड</option>
+                    <option value="Karnataka">कर्नाटक</option>
+                    <option value="Kerala">केरल</option>
+                    <option value="Madhya Pradesh">मध्य प्रदेश</option>
+                    <option value="Maharashtra">महाराष्ट्र</option>
+                    <option value="Manipur">मणिपुर</option>
+                    <option value="Meghalaya">मेघालय</option>
+                    <option value="Mizoram">मिजोरम</option>
+                    <option value="Nagaland">नागालैंड</option>
+                    <option value="Odisha">ओडिशा</option>
+                    <option value="Punjab">पंजाब</option>
+                    <option value="Rajasthan">राजस्थान</option>
+                    <option value="Sikkim">सिक्किम</option>
+                    <option value="Tamil Nadu">तमिलनाडु</option>
+                    <option value="Telangana">तेलंगाना</option>
+                    <option value="Tripura">त्रिपुरा</option>
+                    <option value="Uttar Pradesh">उत्तर प्रदेश</option>
+                    <option value="Uttarakhand">उत्तराखंड</option>
+                    <option value="West Bengal">पश्चिम बंगाल</option>
+                </optgroup>
+
+                <optgroup label="केंद्रशासित प्रदेश">
+                    <option value="Andaman and Nicobar Islands">
+                        अंडमान और निकोबार द्वीपसमूह
+                    </option>
+                    <option value="Chandigarh">चंडीगढ़</option>
+                    <option value="Dadra and Nagar Haveli and Daman and Diu">
+                        दादरा और नगर हवेली और दमन और दीव
+                    </option>
+                    <option value="Delhi">दिल्ली</option>
+                    <option value="Jammu and Kashmir">
+                        जम्मू और कश्मीर
+                    </option>
+                    <option value="Ladakh">लद्दाख</option>
+                    <option value="Lakshadweep">लक्षद्वीप</option>
+                    <option value="Puducherry">पुडुचेरी</option>
+                </optgroup>
+            </select>
+        </div>
+
+        <!-- DISTRICT -->
         <div>
             <label for="district">जिला *</label>
-            <input id="district" name="district"
-                   maxlength="100" required>
+            <input
+                id="district"
+                name="district"
+                type="text"
+                maxlength="100"
+                required
+                placeholder="अपने जिले का नाम लिखें">
         </div>
 
+        <!-- ASSEMBLY -->
         <div>
             <label for="assembly">विधानसभा क्षेत्र *</label>
-            <input id="assembly" name="assembly"
-                   maxlength="100" required>
+            <input
+                id="assembly"
+                name="assembly"
+                type="text"
+                maxlength="100"
+                required
+                placeholder="विधानसभा क्षेत्र का नाम">
         </div>
 
+        <!-- PANCHAYAT -->
         <div>
             <label for="panchayat">पंचायत / वार्ड</label>
-            <input id="panchayat" name="panchayat"
-                   maxlength="100">
+            <input
+                id="panchayat"
+                name="panchayat"
+                type="text"
+                maxlength="100"
+                placeholder="पंचायत या वार्ड का नाम">
         </div>
 
+        <!-- VILLAGE / CITY -->
         <div>
-            <label for="village">गांव / शहर</label>
-            <input id="village" name="village"
-                   maxlength="100">
+            <label for="village">गाँव / शहर</label>
+            <input
+                id="village"
+                name="village"
+                type="text"
+                maxlength="100"
+                placeholder="गाँव या शहर का नाम">
         </div>
 
+        <!-- REASON -->
         <div class="full">
             <label for="reason">
                 पार्टी से जुड़ने का कारण (वैकल्पिक)
             </label>
 
-            <textarea id="reason" name="reason"
-                      rows="3" maxlength="500"></textarea>
+            <textarea
+                id="reason"
+                name="reason"
+                rows="3"
+                maxlength="500"
+                placeholder="यहाँ लिखें..."></textarea>
         </div>
 
+        <!-- CONSENT -->
         <div class="full consent">
-            <input type="checkbox" id="consent" required>
+            <input
+                type="checkbox"
+                id="consent"
+                name="consent"
+                required>
 
             <label for="consent">
-                मैं सहमत हूं कि सदस्यता आवेदन की समीक्षा
+                मैं सहमत हूँ कि सदस्यता आवेदन की समीक्षा
                 और मुझसे संपर्क करने के लिए मेरी जानकारी
                 का उपयोग किया जा सकता है।
             </label>
         </div>
 
+        <!-- SUBMIT -->
         <div class="full">
             <button type="submit" class="btn">
                 आवेदन जमा करें
             </button>
 
-            <p id="formMessage" class="message"
-               role="status"></p>
+            <p
+                id="formMessage"
+                class="message"
+                role="status"
+                aria-live="polite"></p>
+
+            <p class="small-note">
+                आवेदन वास्तव में जमा करने के लिए डेटाबेस कनेक्शन
+                पूरा होना आवश्यक है।
+            </p>
         </div>
 
     </form>
 </section>
 
+<!-- PUBLIC MEMBERS LIST -->
 <section class="card" id="members">
 
     <h2>👥 सार्वजनिक सदस्य सूची</h2>
 
     <p>
-        केवल मंजूर सदस्यों के नाम और सदस्यता संख्या
-        सार्वजनिक सूची में दिखाई जाएगी।
+        केवल स्वीकृत सदस्यों के नाम और सदस्यता संख्या
+        सार्वजनिक सूची में दिखाई जानी चाहिए।
     </p>
 
     <div class="table-wrap">
@@ -352,7 +536,8 @@ footer strong {
             <tbody id="memberList">
                 <tr>
                     <td colspan="4">
-                        डेटाबेस कनेक्ट होने के बाद सूची दिखाई जाएगी।
+                        डेटाबेस कनेक्ट होने के बाद स्वीकृत
+                        सदस्यों की सूची यहाँ दिखाई जाएगी।
                     </td>
                 </tr>
             </tbody>
@@ -361,22 +546,27 @@ footer strong {
 
 </section>
 
+<!-- MEMBERSHIP STATUS -->
 <section class="card" id="status">
 
     <h2>🪪 मेरी सदस्यता</h2>
 
     <p>
-        आवेदन ID डालकर अपनी सदस्यता की स्थिति देख सकेंगे।
+        अपने आवेदन की स्थिति देखने के लिए आवेदन ID दर्ज करें।
     </p>
 
     <form id="statusForm" style="margin-top:18px">
 
         <div class="full">
-            <label for="applicationId">आवेदन ID</label>
+            <label for="applicationId">आवेदन ID *</label>
 
-            <input id="applicationId"
-                   placeholder="अपनी आवेदन ID डालें"
-                   required>
+            <input
+                id="applicationId"
+                name="applicationId"
+                type="text"
+                maxlength="100"
+                required
+                placeholder="अपनी आवेदन ID दर्ज करें">
         </div>
 
         <div class="full">
@@ -384,8 +574,11 @@ footer strong {
                 सदस्यता की स्थिति देखें
             </button>
 
-            <p id="statusMessage"
-               class="message" role="status"></p>
+            <p
+                id="statusMessage"
+                class="message"
+                role="status"
+                aria-live="polite"></p>
         </div>
 
     </form>
@@ -394,42 +587,70 @@ footer strong {
 
 </main>
 
+<!-- FOOTER -->
 <footer>
     <p><strong>YJP — युवा जनता पार्टी</strong></p>
-    <p>आधिकारिक सदस्यता पोर्टल</p>
+    <p>सदस्यता एवं संगठन पोर्टल</p>
     <p>© <span id="year"></span> YJP</p>
 </footer>
 
 <script>
+"use strict";
+
 document.getElementById("year").textContent =
     new Date().getFullYear();
 
 /*
-महत्वपूर्ण:
-यह अभी मुख्य वेबसाइट का फ्रंटएंड है।
-डेटाबेस कनेक्ट होने तक आवेदन सेव नहीं होंगे।
+==================================================
+महत्वपूर्ण जानकारी
+
+यह अभी वेबसाइट का फ्रंटएंड है।
+
+Supabase डेटाबेस कनेक्ट होने तक:
+1. आवेदन डेटाबेस में सेव नहीं होगा।
+2. आवेदन ID अपने आप नहीं बनेगी।
+3. एडमिन अप्रूवल अभी काम नहीं करेगा।
+4. ईमेल नोटिफिकेशन नहीं जाएगा।
+5. सदस्य सूची डेटाबेस से नहीं आएगी।
+6. सदस्यता स्टेटस की वास्तविक जाँच नहीं होगी।
+
+इन सुविधाओं को चालू करने के लिए सुरक्षित
+Supabase डेटाबेस और सर्वर-साइड सेटअप आवश्यक है।
+==================================================
 */
 
+// Membership form
 document.getElementById("joinForm").addEventListener(
     "submit",
     function(event) {
         event.preventDefault();
 
-        document.getElementById("formMessage").textContent =
-            "अभी आवेदन जमा नहीं हुआ है। " +
-            "आवेदन सेव करने और ID बनाने के लिए " +
-            "डेटाबेस सेटअप करना जरूरी है।";
+        const message =
+            document.getElementById("formMessage");
+
+        message.textContent =
+            "आपका आवेदन अभी जमा नहीं हुआ है। " +
+            "आवेदन सेव करने के लिए वेबसाइट का डेटाबेस " +
+            "कनेक्ट करना आवश्यक है।";
+
+        message.style.color = "#a33b20";
     }
 );
 
+// Membership status form
 document.getElementById("statusForm").addEventListener(
     "submit",
     function(event) {
         event.preventDefault();
 
-        document.getElementById("statusMessage").textContent =
-            "सदस्यता की स्थिति देखने के लिए " +
-            "डेटाबेस कनेक्शन जरूरी है।";
+        const message =
+            document.getElementById("statusMessage");
+
+        message.textContent =
+            "सदस्यता की स्थिति जाँचने के लिए " +
+            "डेटाबेस कनेक्शन पूरा करना आवश्यक है।";
+
+        message.style.color = "#a33b20";
     }
 );
 </script>
