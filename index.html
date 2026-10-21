@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>YJP | युवा जनता पार्टी</title>
 <meta name="description" content="युवा जनता पार्टी की ऑनलाइन जन-पहल एवं आवेदन वेबसाइट।">
 
@@ -62,6 +63,7 @@ th{background:#075b3c;color:white}
 .card-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:14px}
 footer{background:#032b20;color:white;text-align:center;padding:25px 10px}
 footer strong{color:#d9f99d}
+
 @media(max-width:600px){
 header{padding:12px 4%}
 .brand h2{font-size:18px}
@@ -76,11 +78,12 @@ form{grid-template-columns:1fr}
 .member-card-body{padding:14px;gap:12px}
 .member-card-head h3{font-size:18px}
 }
+
 @media print{
 body *{visibility:hidden!important}
 #memberCardWrap,#memberCardWrap *{visibility:visible!important}
 #memberCardWrap{display:block!important;position:absolute;left:0;top:0;width:100%;margin:0}
-.card-actions,.card-actions *, .small-note,.notice{display:none!important}
+.card-actions,.small-note,.notice{display:none!important}
 .member-card{max-width:100%;box-shadow:none;print-color-adjust:exact;-webkit-print-color-adjust:exact}
 }
 </style>
@@ -134,10 +137,10 @@ body *{visibility:hidden!important}
 <ul class="purpose-list">
 <li>आवेदक की आयु कम से कम 23 वर्ष होनी चाहिए।</li>
 <li>आवेदक ने कम से कम 10वीं कक्षा उत्तीर्ण की होनी चाहिए।</li>
-<li>वर्तमान सरकारी कर्मचारी आवेदन जमा नहीं कर सकते, जहाँ लागू नियम इसकी अनुमति न दें।</li>
+<li>वर्तमान सरकारी कर्मचारियों की पात्रता लागू सेवा नियमों के अनुसार जाँची जाएगी।</li>
 <li>आवेदन में सही जानकारी देना आवश्यक है।</li>
 <li>आवेदन जमा होना सदस्यता की स्वीकृति नहीं है।</li>
-<li>सेवानिवृत्त व्यक्ति की पात्रता अलग से जाँची जा सकती है।</li>
+<li>सेवानिवृत्त व्यक्ति की पात्रता लागू नियमों के अनुसार जाँची जाएगी।</li>
 </ul>
 <div class="warning">सरकारी कर्मचारियों पर राजनीतिक गतिविधियों से संबंधित सेवा नियम या कानूनी प्रतिबंध लागू हो सकते हैं। लागू नियमों की जाँच आवश्यक है।</div>
 </section>
@@ -147,6 +150,7 @@ body *{visibility:hidden!important}
 <div class="notice">आवेदन जमा करने के बाद आवेदन ID मिलेगी। उसे सुरक्षित रखें। आवेदन की स्वीकृति समीक्षा के बाद होगी।</div>
 
 <form id="joinForm">
+
 <div>
 <label for="name">पूरा नाम *</label>
 <input id="name" name="name" type="text" maxlength="100" required autocomplete="name" placeholder="अपना पूरा नाम लिखें">
@@ -273,16 +277,28 @@ body *{visibility:hidden!important}
 <button type="submit" class="btn" id="submitBtn">आवेदन जमा करें</button>
 <p id="formMessage" class="message" role="status"></p>
 </div>
+
 </form>
 </section>
 
 <section class="card" id="members">
 <h2>👥 स्वीकृत आवेदकों की सार्वजनिक सूची</h2>
-<p>यहाँ स्वीकृत आवेदकों का नाम, आवेदन ID और जिला दिखाया जाएगा।</p>
+<p>यहाँ सभी स्वीकृत आवेदकों का आवेदन ID, नाम, जिला और स्थिति दिखाई जाएगी।</p>
+<p id="memberCount" class="small-note">स्वीकृत सदस्यों की संख्या लोड हो रही है...</p>
+
 <div class="table-wrap">
 <table>
-<thead><tr><th>आवेदन ID</th><th>नाम</th><th>जिला</th><th>स्थिति</th></tr></thead>
-<tbody id="memberList"><tr><td colspan="4">सूची लोड हो रही है...</td></tr></tbody>
+<thead>
+<tr>
+<th>आवेदन ID</th>
+<th>नाम</th>
+<th>जिला</th>
+<th>स्थिति</th>
+</tr>
+</thead>
+<tbody id="memberList">
+<tr><td colspan="4">सूची लोड हो रही है...</td></tr>
+</tbody>
 </table>
 </div>
 </section>
@@ -303,6 +319,7 @@ body *{visibility:hidden!important}
 </form>
 
 <div id="memberCardWrap">
+
 <div class="notice">यह YJP की ऑनलाइन जन-पहल का पहचान कार्ड है। यह सरकारी पहचान-पत्र नहीं है।</div>
 
 <div class="card-actions" style="margin-bottom:12px">
@@ -315,17 +332,22 @@ body *{visibility:hidden!important}
 <div class="member-card" id="memberCard">
 <div class="member-card-head">
 <img src="logo.png" alt="YJP लोगो" onerror="this.style.display='none'">
-<div><h3>युवा जनता पार्टी (YJP)</h3><p>ऑनलाइन जन-पहल पहचान कार्ड</p></div>
+<div>
+<h3>युवा जनता पार्टी (YJP)</h3>
+<p>ऑनलाइन जन-पहल पहचान कार्ड</p>
+</div>
 </div>
 
 <div class="member-card-body">
 <img id="cardPhoto" class="member-photo" alt="सदस्य की फोटो" src="" style="display:none">
+
 <div class="member-details">
 <p><strong>नाम:</strong> <span id="cardName"></span></p>
 <p><strong>आवेदन ID:</strong> <span id="cardId"></span></p>
 <p><strong>जिला:</strong> <span id="cardDistrict"></span></p>
 <p><strong>स्थिति:</strong> <span id="cardStatus">स्वीकृत</span></p>
 </div>
+
 <div class="qr-area">
 <img id="cardQr" alt="आवेदन ID का QR कोड">
 <small>आवेदन ID संदर्भ</small>
@@ -338,9 +360,11 @@ body *{visibility:hidden!important}
 <div class="card-actions">
 <button type="button" class="btn" id="downloadCardBtn">कार्ड प्रिंट / PDF सेव करें</button>
 </div>
+
 <p class="small-note">प्रिंट विंडो में “Save as PDF” चुनें।</p>
 </div>
 </section>
+
 </main>
 
 <footer>
@@ -350,295 +374,392 @@ body *{visibility:hidden!important}
 </footer>
 
 <script type="module">
-import {initializeApp} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
 
 import {
-getFirestore,collection,addDoc,getDoc,doc,query,where,getDocs,serverTimestamp
+    getFirestore,
+    collection,
+    addDoc,
+    getDoc,
+    doc,
+    getDocs,
+    serverTimestamp
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
 const firebaseConfig = {
-apiKey: "AIzaSyCT0pjRKKAFzrHu_0WiLIgcqcLwo0DmVrA",
-authDomain: "yjp-official.firebaseapp.com",
-projectId: "yjp-official",
-storageBucket: "yjp-official.firebasestorage.app",
-messagingSenderId: "231867917087",
-appId: "1:231867917087:web:198f04bd272eeffc1ec62a",
-measurementId: "G-YYEXE72XEX"
+    apiKey: "AIzaSyCT0pjRKKAFzrHu_0WiLIgcqcLwo0DmVrA",
+    authDomain: "yjp-official.firebaseapp.com",
+    projectId: "yjp-official",
+    storageBucket: "yjp-official.firebasestorage.app",
+    messagingSenderId: "231867917087",
+    appId: "1:231867917087:web:198f04bd272eeffc1ec62a",
+    measurementId: "G-YYEXE72XEX"
 };
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-document.getElementById("year").textContent = new Date().getFullYear();
+const $ = id => document.getElementById(id);
 
-function normalizeStatus(value){
-return String(value||"").trim().toLowerCase();
+$("year").textContent = new Date().getFullYear();
+
+function normalizeStatus(value) {
+    return String(value || "").trim().toLowerCase();
 }
 
-function isApproved(value){
-return ["approved","स्वीकृत"].includes(normalizeStatus(value));
+function isApproved(value) {
+    return ["approved", "स्वीकृत"].includes(normalizeStatus(value));
 }
 
-function isRejected(value){
-return ["rejected","अस्वीकृत"].includes(normalizeStatus(value));
+function isRejected(value) {
+    return ["rejected", "अस्वीकृत"].includes(normalizeStatus(value));
 }
 
-function displayStatus(value){
-if(isApproved(value)) return "स्वीकृत";
-if(isRejected(value)) return "अस्वीकृत";
-return "समीक्षाधीन / लंबित";
+function displayStatus(value) {
+    if (isApproved(value)) return "स्वीकृत";
+    if (isRejected(value)) return "अस्वीकृत";
+    return "समीक्षाधीन / लंबित";
 }
 
-/* उम्र की गणना */
-function calculateAge(dateString){
-if(!dateString) return -1;
-const birthDate = new Date(dateString+"T00:00:00");
-const today = new Date();
-if(Number.isNaN(birthDate.getTime())) return -1;
-if(birthDate>today) return -1;
+function calculateAge(dateString) {
+    if (!dateString) return -1;
 
-let age=today.getFullYear()-birthDate.getFullYear();
-const monthDifference=today.getMonth()-birthDate.getMonth();
+    const birthDate = new Date(dateString + "T00:00:00");
+    const today = new Date();
 
-if(monthDifference<0||(monthDifference===0&&today.getDate()<birthDate.getDate())){
-age--;
-}
-return age;
+    if (Number.isNaN(birthDate.getTime()) || birthDate > today) {
+        return -1;
+    }
+
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const monthDifference = today.getMonth() - birthDate.getMonth();
+
+    if (
+        monthDifference < 0 ||
+        (monthDifference === 0 && today.getDate() < birthDate.getDate())
+    ) {
+        age--;
+    }
+
+    return age;
 }
 
 /* आवेदन जमा करना */
-const joinForm=document.getElementById("joinForm");
-const formMessage=document.getElementById("formMessage");
-const submitBtn=document.getElementById("submitBtn");
+$("joinForm").addEventListener("submit", async event => {
+    event.preventDefault();
 
-joinForm.addEventListener("submit",async(event)=>{
-event.preventDefault();
-formMessage.textContent="";
-submitBtn.disabled=true;
+    const formMessage = $("formMessage");
+    const submitBtn = $("submitBtn");
 
-const name=document.getElementById("name").value.trim();
-const phone=document.getElementById("phone").value.trim();
-const dob=document.getElementById("dob").value;
-const education=document.getElementById("education").value;
-const employment=document.getElementById("employment").value;
-const state=document.getElementById("state").value;
-const district=document.getElementById("district").value.trim();
-const assembly=document.getElementById("assembly").value.trim();
-const panchayat=document.getElementById("panchayat").value.trim();
-const village=document.getElementById("village").value.trim();
-const reason=document.getElementById("reason").value.trim();
+    formMessage.textContent = "";
+    submitBtn.disabled = true;
 
-if(employment==="government_employee"){
-formMessage.textContent="आपकी रोजगार स्थिति के कारण आवेदन स्वीकार नहीं किया जा सकता। लागू नियमों की जाँच करें।";
-formMessage.style.color="#a33b20";
-submitBtn.disabled=false;
-return;
-}
+    const name = $("name").value.trim();
+    const phone = $("phone").value.trim();
+    const dob = $("dob").value;
+    const education = $("education").value;
+    const employment = $("employment").value;
+    const state = $("state").value;
+    const district = $("district").value.trim();
+    const assembly = $("assembly").value.trim();
+    const panchayat = $("panchayat").value.trim();
+    const village = $("village").value.trim();
+    const reason = $("reason").value.trim();
 
-const age=calculateAge(dob);
+    try {
+        if (employment === "government_employee") {
+            formMessage.textContent =
+                "सरकारी कर्मचारियों की पात्रता लागू सेवा नियमों के अनुसार जाँची जाएगी। कृपया आवेदन जमा करने से पहले अपने लागू नियम जाँचें।";
+            formMessage.style.color = "#a33b20";
+            return;
+        }
 
-if(age<0){
-formMessage.textContent="कृपया सही जन्म तिथि दर्ज करें।";
-formMessage.style.color="#a33b20";
-submitBtn.disabled=false;
-return;
-}
+        const age = calculateAge(dob);
 
-/* मुख्य बदलाव: अब कम से कम 23 वर्ष आवश्यक हैं */
-if(age<23){
-formMessage.textContent="आवेदन के लिए कम से कम 23 वर्ष की आयु आवश्यक है।";
-formMessage.style.color="#a33b20";
-submitBtn.disabled=false;
-return;
-}
+        if (age < 0) {
+            formMessage.textContent = "कृपया सही जन्म तिथि दर्ज करें।";
+            formMessage.style.color = "#a33b20";
+            return;
+        }
 
-const eligibleEducation=["10th","12th","graduate","postgraduate"];
+        if (age < 23) {
+            formMessage.textContent =
+                "आवेदन के लिए कम से कम 23 वर्ष की आयु आवश्यक है।";
+            formMessage.style.color = "#a33b20";
+            return;
+        }
 
-if(!eligibleEducation.includes(education)){
-formMessage.textContent="आवेदन के लिए कम से कम 10वीं कक्षा उत्तीर्ण होना आवश्यक है।";
-formMessage.style.color="#a33b20";
-submitBtn.disabled=false;
-return;
-}
+        const eligibleEducation = [
+            "10th",
+            "12th",
+            "graduate",
+            "postgraduate"
+        ];
 
-if(!document.getElementById("declaration").checked||!document.getElementById("consent").checked){
-formMessage.textContent="आगे बढ़ने के लिए दोनों घोषणाओं पर सहमति दें।";
-formMessage.style.color="#a33b20";
-submitBtn.disabled=false;
-return;
-}
+        if (!eligibleEducation.includes(education)) {
+            formMessage.textContent =
+                "आवेदन के लिए कम से कम 10वीं कक्षा उत्तीर्ण होना आवश्यक है।";
+            formMessage.style.color = "#a33b20";
+            return;
+        }
 
-const formData={
-name,phone,dob,age,education,employment,state,district,assembly,panchayat,village,reason,
-declarationAccepted:true,
-consentAccepted:true,
-status:"Pending",
-createdAt:serverTimestamp()
-};
+        if (!$("declaration").checked || !$("consent").checked) {
+            formMessage.textContent =
+                "आगे बढ़ने के लिए दोनों घोषणाओं पर सहमति दें।";
+            formMessage.style.color = "#a33b20";
+            return;
+        }
 
-try{
-formMessage.textContent="आपका आवेदन जमा किया जा रहा है...";
-formMessage.style.color="#075b3c";
+        const formData = {
+            name,
+            phone,
+            dob,
+            age,
+            education,
+            employment,
+            state,
+            district,
+            assembly,
+            panchayat,
+            village,
+            reason,
+            declarationAccepted: true,
+            consentAccepted: true,
+            status: "Pending",
+            createdAt: serverTimestamp()
+        };
 
-const docRef=await addDoc(collection(db,"members"),formData);
+        formMessage.textContent = "आपका आवेदन जमा किया जा रहा है...";
+        formMessage.style.color = "#075b3c";
 
-formMessage.textContent="आवेदन सफलतापूर्वक जमा हो गया। आपकी आवेदन ID: "+docRef.id+"। इसे सुरक्षित रखें। आवेदन समीक्षा के बाद स्वीकार होगा।";
-formMessage.style.color="green";
-joinForm.reset();
-}catch(error){
-console.error("Application submission error:",error);
-formMessage.textContent="आवेदन जमा नहीं हो पाया। Firebase सेटिंग, इंटरनेट और Firestore Rules जाँचें।";
-formMessage.style.color="#a33b20";
-}finally{
-submitBtn.disabled=false;
-}
+        const docRef = await addDoc(collection(db, "members"), formData);
+
+        formMessage.textContent =
+            "आवेदन सफलतापूर्वक जमा हो गया। आपकी आवेदन ID: " +
+            docRef.id +
+            "। इसे सुरक्षित रखें। आवेदन समीक्षा के बाद स्वीकार होगा।";
+
+        formMessage.style.color = "green";
+
+        $("joinForm").reset();
+
+    } catch (error) {
+        console.error("Application submission error:", error);
+
+        formMessage.textContent =
+            "आवेदन जमा नहीं हो पाया। इंटरनेट, Firebase कॉन्फ़िगरेशन और Firestore Rules जाँचें।";
+
+        formMessage.style.color = "#a33b20";
+
+    } finally {
+        submitBtn.disabled = false;
+    }
 });
+
+/* सार्वजनिक सूची: सभी रिकॉर्ड पढ़कर स्वीकृत सदस्य छाँटें */
+async function loadApprovedMembers() {
+    const memberList = $("memberList");
+    const memberCount = $("memberCount");
+
+    memberList.innerHTML =
+        '<tr><td colspan="4">सूची लोड हो रही है...</td></tr>';
+
+    memberCount.textContent = "स्वीकृत सदस्यों की संख्या गिनी जा रही है...";
+
+    try {
+        const snapshot = await getDocs(collection(db, "members"));
+        const approvedMembers = [];
+
+        snapshot.forEach(memberDoc => {
+            const data = memberDoc.data();
+
+            if (isApproved(data.status)) {
+                approvedMembers.push({
+                    id: memberDoc.id,
+                    name: data.name || "—",
+                    district: data.district || "—"
+                });
+            }
+        });
+
+        // नए आवेदन पहले दिखाएँ
+        approvedMembers.reverse();
+
+        memberList.replaceChildren();
+
+        memberCount.textContent =
+            "कुल स्वीकृत सदस्य: " + approvedMembers.length;
+
+        if (approvedMembers.length === 0) {
+            memberList.innerHTML =
+                '<tr><td colspan="4">अभी कोई स्वीकृत आवेदन नहीं मिला।</td></tr>';
+            return;
+        }
+
+        approvedMembers.forEach(member => {
+            const row = document.createElement("tr");
+
+            const values = [
+                member.id,
+                member.name,
+                member.district,
+                "स्वीकृत"
+            ];
+
+            values.forEach((value, index) => {
+                const cell = document.createElement("td");
+                cell.textContent = value;
+
+                if (index === 3) {
+                    cell.style.color = "green";
+                    cell.style.fontWeight = "bold";
+                }
+
+                row.appendChild(cell);
+            });
+
+            memberList.appendChild(row);
+        });
+
+    } catch (error) {
+        console.error("Approved members error:", error);
+
+        memberCount.textContent = "सदस्यों की सूची लोड नहीं हो सकी।";
+
+        memberList.innerHTML =
+            '<tr><td colspan="4">सूची लोड नहीं हो पाई। Firestore Rules, इंटरनेट और Firebase कलेक्शन की जाँच करें।</td></tr>';
+    }
+}
 
 /* आवेदन की स्थिति */
-const statusForm=document.getElementById("statusForm");
-const statusMessage=document.getElementById("statusMessage");
-const statusBtn=document.getElementById("statusBtn");
-const memberCardWrap=document.getElementById("memberCardWrap");
+let currentApprovedMember = null;
 
-let currentApprovedMember=null;
+$("statusForm").addEventListener("submit", async event => {
+    event.preventDefault();
 
-statusForm.addEventListener("submit",async(event)=>{
-event.preventDefault();
-memberCardWrap.style.display="none";
-currentApprovedMember=null;
-statusMessage.textContent="";
+    $("memberCardWrap").style.display = "none";
+    currentApprovedMember = null;
 
-const appId=document.getElementById("applicationId").value.trim();
-if(!appId) return;
+    const statusMessage = $("statusMessage");
+    const statusBtn = $("statusBtn");
+    const appId = $("applicationId").value.trim();
 
-statusBtn.disabled=true;
-statusMessage.textContent="स्थिति जाँची जा रही है...";
-statusMessage.style.color="#075b3c";
+    statusMessage.textContent = "";
 
-try{
-const snap=await getDoc(doc(db,"members",appId));
+    if (!appId) return;
 
-if(!snap.exists()){
-statusMessage.textContent="इस आवेदन ID का रिकॉर्ड नहीं मिला। ID को Firebase Document ID से मिलाएँ।";
-statusMessage.style.color="#a33b20";
-return;
-}
+    statusBtn.disabled = true;
+    statusMessage.textContent = "स्थिति जाँची जा रही है...";
+    statusMessage.style.color = "#075b3c";
 
-const data=snap.data();
-const approved=isApproved(data.status);
-const rejected=isRejected(data.status);
+    try {
+        const snap = await getDoc(doc(db, "members", appId));
 
-if(rejected){
-statusMessage.textContent="नाम: "+(data.name||"—")+" | स्थिति: अस्वीकृत";
-statusMessage.style.color="#a33b20";
-return;
-}
+        if (!snap.exists()) {
+            statusMessage.textContent =
+                "इस आवेदन ID का रिकॉर्ड नहीं मिला। सही Firebase Document ID दर्ज करें।";
+            statusMessage.style.color = "#a33b20";
+            return;
+        }
 
-statusMessage.textContent="नाम: "+(data.name||"—")+" | स्थिति: "+displayStatus(data.status);
-statusMessage.style.color=approved?"green":"#d97706";
+        const data = snap.data();
+        const approved = isApproved(data.status);
+        const rejected = isRejected(data.status);
 
-if(!approved) return;
+        if (rejected) {
+            statusMessage.textContent =
+                "नाम: " + (data.name || "—") + " | स्थिति: अस्वीकृत";
+            statusMessage.style.color = "#a33b20";
+            return;
+        }
 
-currentApprovedMember={id:snap.id,name:data.name||"",district:data.district||""};
+        statusMessage.textContent =
+            "नाम: " + (data.name || "—") +
+            " | स्थिति: " + displayStatus(data.status);
 
-document.getElementById("cardName").textContent=currentApprovedMember.name;
-document.getElementById("cardId").textContent=currentApprovedMember.id;
-document.getElementById("cardDistrict").textContent=currentApprovedMember.district;
-document.getElementById("cardStatus").textContent="स्वीकृत";
+        statusMessage.style.color = approved ? "green" : "#d97706";
 
-document.getElementById("cardQr").src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data="+encodeURIComponent("YJP Online Initiative | Application ID: "+snap.id);
+        if (!approved) return;
 
-document.getElementById("memberPhoto").value="";
-const photo=document.getElementById("cardPhoto");
-photo.src="";
-photo.style.display="none";
+        currentApprovedMember = {
+            id: snap.id,
+            name: data.name || "",
+            district: data.district || ""
+        };
 
-memberCardWrap.style.display="block";
-await loadApprovedMembers();
-}catch(error){
-console.error("Status lookup error:",error);
-statusMessage.textContent="स्थिति जाँचने में त्रुटि हुई। Firebase Rules, कलेक्शन नाम और इंटरनेट जाँचें।";
-statusMessage.style.color="#a33b20";
-}finally{
-statusBtn.disabled=false;
-}
+        $("cardName").textContent = currentApprovedMember.name;
+        $("cardId").textContent = currentApprovedMember.id;
+        $("cardDistrict").textContent = currentApprovedMember.district;
+        $("cardStatus").textContent = "स्वीकृत";
+
+        $("cardQr").src =
+            "https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=" +
+            encodeURIComponent(
+                "YJP Online Initiative | Application ID: " + snap.id
+            );
+
+        $("memberPhoto").value = "";
+
+        const photo = $("cardPhoto");
+        photo.src = "";
+        photo.style.display = "none";
+
+        $("memberCardWrap").style.display = "block";
+
+    } catch (error) {
+        console.error("Status lookup error:", error);
+
+        statusMessage.textContent =
+            "स्थिति जाँचने में त्रुटि हुई। Firebase Rules, कलेक्शन नाम और इंटरनेट जाँचें।";
+
+        statusMessage.style.color = "#a33b20";
+
+    } finally {
+        statusBtn.disabled = false;
+    }
 });
 
-/* कार्ड की फोटो */
-document.getElementById("memberPhoto").addEventListener("change",(event)=>{
-const file=event.target.files&&event.target.files[0];
-if(!file) return;
+/* कार्ड के लिए फोटो */
+$("memberPhoto").addEventListener("change", event => {
+    const file = event.target.files && event.target.files[0];
 
-if(!file.type.startsWith("image/")){
-alert("कृपया इमेज फाइल चुनें।");
-event.target.value="";
-return;
-}
+    if (!file) return;
 
-if(file.size>5*1024*1024){
-alert("कृपया 5 MB से छोटी फोटो चुनें।");
-event.target.value="";
-return;
-}
+    if (!file.type.startsWith("image/")) {
+        alert("कृपया इमेज फाइल चुनें।");
+        event.target.value = "";
+        return;
+    }
 
-const reader=new FileReader();
-reader.onload=()=>{
-const photo=document.getElementById("cardPhoto");
-photo.src=reader.result;
-photo.style.display="block";
-};
-reader.readAsDataURL(file);
+    if (file.size > 5 * 1024 * 1024) {
+        alert("कृपया 5 MB से छोटी फोटो चुनें।");
+        event.target.value = "";
+        return;
+    }
+
+    const reader = new FileReader();
+
+    reader.onload = () => {
+        $("cardPhoto").src = reader.result;
+        $("cardPhoto").style.display = "block";
+    };
+
+    reader.readAsDataURL(file);
 });
 
 /* कार्ड प्रिंट / PDF */
-document.getElementById("downloadCardBtn").addEventListener("click",()=>{
-if(!currentApprovedMember){
-alert("कार्ड बनाने से पहले स्वीकृत आवेदन की स्थिति देखें।");
-return;
-}
-window.print();
+$("downloadCardBtn").addEventListener("click", () => {
+    if (!currentApprovedMember) {
+        alert("कार्ड बनाने से पहले स्वीकृत आवेदन की स्थिति देखें।");
+        return;
+    }
+
+    window.print();
 });
 
-/* स्वीकृत आवेदकों की सूची */
-async function loadApprovedMembers(){
-const memberList=document.getElementById("memberList");
-memberList.innerHTML='<tr><td colspan="4">सूची लोड हो रही है...</td></tr>';
-
-try{
-const q=query(collection(db,"members"),where("status","==","Approved"));
-const snapshot=await getDocs(q);
-
-if(snapshot.empty){
-memberList.innerHTML='<tr><td colspan="4">अभी कोई स्वीकृत आवेदन नहीं है।</td></tr>';
-return;
-}
-
-memberList.replaceChildren();
-
-snapshot.forEach((memberDoc)=>{
-const member=memberDoc.data();
-const row=document.createElement("tr");
-const values=[memberDoc.id,member.name||"",member.district||"","स्वीकृत"];
-
-values.forEach((value,index)=>{
-const cell=document.createElement("td");
-cell.textContent=value;
-
-if(index===3){
-cell.style.color="green";
-cell.style.fontWeight="bold";
-}
-row.appendChild(cell);
-});
-memberList.appendChild(row);
-});
-}catch(error){
-console.error("Approved members error:",error);
-memberList.innerHTML='<tr><td colspan="4">सूची लोड नहीं हो पाई। Firebase Rules और इंटरनेट जाँचें।</td></tr>';
-}
-}
-
+/* पेज खुलते ही सूची लोड करें */
 loadApprovedMembers();
 </script>
+
 </body>
 </html>
