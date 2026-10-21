@@ -5,408 +5,443 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>YJP | युवा जनता पार्टी</title>
-
-<meta name="description" content="YJP ऑनलाइन जन-पहल। युवाओं, रोजगार, शिक्षा और आम नागरिकों के मुद्दों पर जागरूकता की पहल।">
+<meta name="description" content="युवा जनता पार्टी की ऑनलाइन जन-पहल एवं सदस्यता आवेदन वेबसाइट।">
 
 <style>
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: Arial, "Noto Sans Devanagari", sans-serif;
-    background: #f0f6f2;
-    color: #173b2b;
-    line-height: 1.7;
+  font-family: Arial, "Noto Sans Devanagari", sans-serif;
+  background: #f0f6f2;
+  color: #173b2b;
+  line-height: 1.6;
 }
 
 header {
-    background: #032b20;
-    color: white;
-    padding: 12px 5%;
-    display: flex;
-    align-items: center;
-    gap: 12px;
+  background: #032b20;
+  color: white;
+  padding: 12px 5%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .logo {
-    width: 58px;
-    height: 58px;
-    border-radius: 50%;
-    object-fit: contain;
-    background: white;
-    border: 2px solid white;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  object-fit: contain;
+  background: white;
+  border: 2px solid white;
 }
 
 .brand h2 {
-    color: #d9f99d;
-    font-size: 21px;
+  color: #d9f99d;
+  font-size: 21px;
 }
 
 .brand p {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 nav {
-    background: #075b3c;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 13px;
-    padding: 13px;
+  background: #075b3c;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding: 13px;
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: bold;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 nav a:hover {
-    color: #d9f99d;
+  color: #d9f99d;
 }
 
 .hero {
-    background: linear-gradient(120deg, #023b2b, #08764b);
-    color: white;
-    text-align: center;
-    padding: 45px 15px;
+  background: linear-gradient(120deg, #023b2b, #08764b);
+  color: white;
+  text-align: center;
+  padding: 55px 15px;
 }
 
 .hero h1 {
-    font-size: 32px;
-    margin-bottom: 12px;
+  font-size: 35px;
+  margin-bottom: 12px;
 }
 
 .hero p {
-    max-width: 750px;
-    margin: auto auto 20px;
+  max-width: 720px;
+  margin: 0 auto 22px;
 }
 
 .btn {
-    display: inline-block;
-    background: #d9f99d;
-    color: #064e32;
-    padding: 12px 18px;
-    border: none;
-    border-radius: 7px;
-    font-weight: bold;
-    font-size: 15px;
-    cursor: pointer;
-    text-decoration: none;
+  display: inline-block;
+  background: #d9f99d;
+  color: #064e32;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 7px;
+  font-weight: bold;
+  font-size: 15px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #c6ed7d;
 }
 
 .btn:disabled {
-    opacity: .6;
-    cursor: not-allowed;
+  opacity: 0.6;
+  cursor: wait;
 }
 
 .container {
-    width: 92%;
-    max-width: 1000px;
-    margin: 25px auto;
+  width: 92%;
+  max-width: 1000px;
+  margin: 25px auto;
 }
 
 .card {
-    background: white;
-    padding: 22px;
-    border-radius: 13px;
-    margin-bottom: 22px;
-    box-shadow: 0 4px 15px #0000000c;
-    scroll-margin-top: 15px;
+  background: white;
+  padding: 22px;
+  border-radius: 13px;
+  margin-bottom: 22px;
+  box-shadow: 0 4px 15px #0000000c;
 }
 
 .card h2 {
-    color: #075b3c;
-    margin-bottom: 15px;
-    font-size: 23px;
-}
-
-.card h3 {
-    color: #075b3c;
-    margin: 18px 0 8px;
+  color: #075b3c;
+  margin-bottom: 15px;
+  font-size: 23px;
 }
 
 .notice {
-    background: #e8f5ec;
-    border-left: 4px solid #08764b;
-    padding: 12px;
-    margin-bottom: 18px;
-    font-size: 14px;
+  background: #e8f5ec;
+  border-left: 4px solid #08764b;
+  padding: 12px;
+  margin-bottom: 18px;
+  font-size: 14px;
 }
 
 .warning {
-    background: #fff7df;
-    border-left: 4px solid #d99a00;
-    padding: 12px;
-    margin: 12px 0;
-    font-size: 14px;
-}
-
-ul, ol {
-    padding-left: 23px;
-    margin: 12px 0;
-}
-
-li {
-    margin-bottom: 7px;
-}
-
-p {
-    margin-bottom: 9px;
+  background: #fff4e5;
+  border-left: 4px solid #d97706;
+  padding: 12px;
+  margin-bottom: 18px;
+  font-size: 14px;
 }
 
 form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
 }
 
 label {
-    display: block;
-    margin-bottom: 6px;
-    font-size: 14px;
-    font-weight: bold;
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: bold;
 }
 
-input, select, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccd9cf;
-    border-radius: 7px;
-    font-size: 15px;
-    font-family: inherit;
-    color: #173b2b;
-    background: white;
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccd9cf;
+  border-radius: 7px;
+  font-size: 15px;
+  font-family: inherit;
+  color: #173b2b;
+  background: white;
 }
 
-input:focus, select:focus, textarea:focus {
-    outline: 2px solid #80bd91;
-    border-color: #075b3c;
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #08764b;
+  border-color: #08764b;
 }
 
 textarea {
-    resize: vertical;
+  resize: vertical;
 }
 
 .full {
-    grid-column: 1 / -1;
+  grid-column: 1 / -1;
 }
 
 .consent {
-    display: flex;
-    gap: 9px;
-    align-items: flex-start;
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
 }
 
 .consent input {
-    width: auto;
-    margin-top: 7px;
-    flex-shrink: 0;
+  width: auto;
+  margin-top: 6px;
 }
 
 .consent label {
-    font-weight: normal;
+  font-weight: normal;
 }
 
 .message {
-    margin-top: 12px;
-    overflow-wrap: anywhere;
-    font-weight: bold;
+  margin-top: 12px;
+  overflow-wrap: anywhere;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.small-note {
+  font-size: 13px;
+  color: #52665a;
+  margin-top: 10px;
+}
+
+.purpose-list {
+  padding-left: 22px;
+  margin: 12px 0;
+}
+
+.purpose-list li {
+  margin: 6px 0;
 }
 
 .table-wrap {
-    overflow-x: auto;
+  overflow-x: auto;
 }
 
 table {
-    width: 100%;
-    min-width: 400px;
-    border-collapse: collapse;
-    margin-top: 15px;
+  width: 100%;
+  min-width: 450px;
+  border-collapse: collapse;
+  margin-top: 15px;
 }
 
-th, td {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-    text-align: left;
-    overflow-wrap: anywhere;
+th,
+td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
 }
 
 th {
-    background: #075b3c;
-    color: white;
+  background: #075b3c;
+  color: white;
 }
 
-footer {
-    background: #032b20;
-    color: white;
-    text-align: center;
-    padding: 25px 10px;
-}
-
-footer strong {
-    color: #d9f99d;
-}
-
-footer a {
-    color: #d9f99d;
-}
-
-/* सदस्यता पहचान कार्ड */
-
-#memberCardSection {
-    display: none;
-    margin-top: 20px;
+#memberCardWrap {
+  display: none;
+  margin-top: 22px;
 }
 
 .member-card {
-    max-width: 650px;
-    margin: 15px auto;
-    border: 3px solid #075b3c;
-    border-radius: 15px;
-    overflow: hidden;
-    background: white;
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+  border: 3px solid #075b3c;
+  border-radius: 16px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 5px 18px #0002;
 }
 
-.member-header {
-    background: #032b20;
-    color: white;
-    padding: 15px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
+.member-card-head {
+  background: #032b20;
+  color: white;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
-.member-header img {
-    width: 55px;
-    height: 55px;
-    object-fit: contain;
-    background: white;
-    border-radius: 50%;
+.member-card-head img {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  object-fit: contain;
+  background: white;
 }
 
-.member-header h3 {
-    color: #d9f99d;
-    margin: 0;
+.member-card-head h3 {
+  color: #d9f99d;
+  font-size: 21px;
 }
 
-.member-body {
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 18px;
+.member-card-head p {
+  font-size: 12px;
+}
+
+.member-card-body {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  padding: 22px;
+  flex-wrap: wrap;
 }
 
 .member-photo {
-    width: 100px;
-    height: 120px;
-    object-fit: cover;
-    border: 2px solid #ddd;
-    border-radius: 8px;
+  width: 105px;
+  height: 125px;
+  object-fit: cover;
+  border: 2px solid #d4e4d8;
+  border-radius: 8px;
+  background: #f0f6f2;
 }
 
 .member-details {
-    flex: 1;
-    min-width: 180px;
-    overflow-wrap: anywhere;
+  flex: 1;
+  min-width: 180px;
 }
 
 .member-details p {
-    margin-bottom: 7px;
+  margin: 5px 0;
+  overflow-wrap: anywhere;
 }
 
 .qr-area {
-    text-align: center;
+  text-align: center;
+  min-width: 100px;
 }
 
 .qr-area img {
-    width: 100px;
-    height: 100px;
+  width: 95px;
+  height: 95px;
+  object-fit: contain;
 }
 
-.member-footer {
-    background: #e8f5ec;
-    padding: 10px;
-    text-align: center;
-    font-size: 11px;
+.qr-area small {
+  display: block;
+  font-size: 10px;
+}
+
+.member-card-foot {
+  background: #e8f5ec;
+  padding: 10px 15px;
+  font-size: 11px;
+  text-align: center;
+  color: #315541;
 }
 
 .card-actions {
-    text-align: center;
-    margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 14px;
 }
 
-@media(max-width:600px) {
-    form {
-        grid-template-columns: 1fr;
-    }
+footer {
+  background: #032b20;
+  color: white;
+  text-align: center;
+  padding: 25px 10px;
+}
 
-    .full {
-        grid-column: auto;
-    }
+footer strong {
+  color: #d9f99d;
+}
 
-    .hero h1 {
-        font-size: 27px;
-    }
+@media (max-width: 600px) {
+  header {
+    padding: 12px 4%;
+  }
 
-    .card {
-        padding: 16px;
-    }
+  .brand h2 {
+    font-size: 18px;
+  }
 
-    .member-body {
-        padding: 12px;
-        gap: 12px;
-    }
+  nav {
+    gap: 12px;
+  }
 
-    nav {
-        gap: 10px;
-    }
+  nav a {
+    font-size: 13px;
+  }
 
-    nav a {
-        font-size: 13px;
-    }
+  form {
+    grid-template-columns: 1fr;
+  }
+
+  .full {
+    grid-column: auto;
+  }
+
+  .hero {
+    padding: 42px 15px;
+  }
+
+  .hero h1 {
+    font-size: 29px;
+  }
+
+  .card {
+    padding: 17px;
+  }
+
+  .card h2 {
+    font-size: 21px;
+  }
+
+  .member-card-body {
+    padding: 14px;
+    gap: 12px;
+  }
+
+  .member-card-head h3 {
+    font-size: 18px;
+  }
 }
 
 @media print {
-    body * {
-        visibility: hidden !important;
-    }
+  body * {
+    visibility: hidden !important;
+  }
 
-    #memberCardSection,
-    #memberCardSection * {
-        visibility: visible !important;
-    }
+  #memberCardWrap,
+  #memberCardWrap * {
+    visibility: visible !important;
+  }
 
-    #memberCardSection {
-        display: block !important;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-    }
+  #memberCardWrap {
+    display: block !important;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+  }
 
-    #memberCardSection .notice,
-    #memberCardSection .card-actions,
-    #memberCardSection .photo-upload,
-    #memberCardSection > p {
-        display: none !important;
-    }
+  .card-actions,
+  .card-actions *,
+  .small-note {
+    display: none !important;
+  }
 
-    .member-card {
-        max-width: 100%;
-        box-shadow: none;
-        print-color-adjust: exact;
-        -webkit-print-color-adjust: exact;
-    }
+  .member-card {
+    max-width: 100%;
+    box-shadow: none;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
 }
 </style>
 </head>
@@ -414,668 +449,507 @@ footer a {
 <body>
 
 <header>
-    <img src="logo.png" class="logo" alt="YJP Logo">
-    <div class="brand">
-        <h2>युवा जनता पार्टी</h2>
-        <p>ऑनलाइन जन-पहल पोर्टल</p>
-    </div>
+  <img
+    src="logo.png"
+    class="logo"
+    alt="YJP लोगो"
+    onerror="this.style.display='none'"
+  >
+
+  <div class="brand">
+    <h2>युवा जनता पार्टी</h2>
+    <p>ऑनलाइन जन-पहल एवं सदस्यता आवेदन पोर्टल</p>
+  </div>
 </header>
 
 <nav>
-    <a href="#home">होम</a>
-    <a href="#purpose">हमारा उद्देश्य</a>
-    <a href="#eligibility">योग्यता</a>
-    <a href="#rules">नियम</a>
-    <a href="#policies">जनकल्याण नीति</a>
-    <a href="#join">आवेदन करें</a>
-    <a href="#members">सार्वजनिक सूची</a>
-    <a href="#status">मेरा आवेदन</a>
+  <a href="#home">होम</a>
+  <a href="#purpose">हमारा उद्देश्य</a>
+  <a href="#rules">नियम</a>
+  <a href="#join">आवेदन करें</a>
+  <a href="#members">सार्वजनिक सूची</a>
+  <a href="#status">आवेदन की स्थिति</a>
 </nav>
 
 <section class="hero" id="home">
-    <h1>युवा जनता पार्टी (YJP)</h1>
+  <h1>युवा जनता पार्टी (YJP)</h1>
 
-    <p>
-        युवाओं और आम नागरिकों की आवाज उठाने, शिक्षा और रोजगार
-        के मुद्दों पर जागरूकता बढ़ाने तथा जनता की समस्याओं
-        को सामने लाने की एक ऑनलाइन जन-पहल।
-    </p>
+  <p>
+    युवाओं और आम नागरिकों की आवाज उठाने,
+    उनकी समस्याओं को सामने लाने तथा जनहित के मुद्दों पर
+    जागरूकता बढ़ाने की ऑनलाइन पहल।
+  </p>
 
-    <a href="#join" class="btn">हमसे जुड़ें</a>
+  <a href="#join" class="btn">हमारी पहल से जुड़ें</a>
 </section>
 
 <main class="container">
 
-<!-- उद्देश्य -->
-
 <section class="card" id="purpose">
-    <h2>🇮🇳 हमारा उद्देश्य</h2>
+  <h2>🇮🇳 हमारा उद्देश्य</h2>
 
-    <div class="notice">
-        <strong>महत्वपूर्ण सूचना:</strong>
-        YJP इस वेबसाइट पर एक काल्पनिक ऑनलाइन जन-पहल के रूप में
-        प्रस्तुत है। यह वेबसाइट किसी पंजीकृत राजनीतिक दल,
-        सरकारी संस्था या निर्वाचन आयोग की आधिकारिक वेबसाइट
-        होने का दावा नहीं करती।
-    </div>
+  <div class="notice">
+    <strong>वर्तमान स्थिति:</strong>
+    यह वेबसाइट YJP की ऑनलाइन जन-पहल और आवेदन प्रबंधन के लिए है।
+    यह अपने आप में निर्वाचन आयोग में पंजीकृत राजनीतिक दल या
+    सरकारी संस्था होने का दावा नहीं करती।
+  </div>
 
-    <p>
-        हमारा उद्देश्य युवाओं और आम नागरिकों की समस्याओं को
-        समझना, उनकी आवाज को सामने लाना और जनहित के मुद्दों
-        पर जागरूकता बढ़ाना है।
-    </p>
+  <p>
+    युवा जनता पार्टी (YJP) की इस ऑनलाइन पहल का उद्देश्य युवाओं
+    और आम नागरिकों की समस्याओं को समझना, जनहित के मुद्दों पर
+    जागरूकता बढ़ाना और लोगों के सुझावों को सामने लाना है।
+  </p>
 
-    <ul>
-        <li>युवाओं की समस्याओं और बेरोजगारी पर आवाज उठाना।</li>
-        <li>शिक्षा और कौशल विकास के अवसरों को बढ़ावा देना।</li>
-        <li>स्वास्थ्य, सड़क, पानी और स्वच्छता के मुद्दे उठाना।</li>
-        <li>किसानों, मजदूरों और आम नागरिकों की समस्याओं पर ध्यान देना।</li>
-        <li>भ्रष्टाचार और सरकारी कामकाज में अनियमितताओं के विरुद्ध कानूनी तरीके से आवाज उठाना।</li>
-        <li>महिलाओं की सुरक्षा और समान अवसरों को प्रोत्साहित करना।</li>
-        <li>शांतिपूर्ण, संवैधानिक और लोकतांत्रिक तरीकों को अपनाना।</li>
-    </ul>
+  <ul class="purpose-list">
+    <li>शिक्षा और रोजगार से जुड़े मुद्दों पर आवाज उठाना।</li>
+    <li>स्वास्थ्य, सड़क, पानी और सार्वजनिक सेवाओं से जुड़ी समस्याएँ सामने लाना।</li>
+    <li>नागरिकों के सुझाव सुनना और जनहित के विषयों पर संवाद बढ़ाना।</li>
+    <li>शांतिपूर्ण, संवैधानिक और जिम्मेदार तरीके से काम करना।</li>
+  </ul>
 
-    <p><strong>हमारा संदेश:</strong> जनता की आवाज, युवाओं की भागीदारी।</p>
+  <p>
+    <strong>हमारा संदेश:</strong>
+    जनता की आवाज, युवाओं की भागीदारी और जनहित के लिए संवाद।
+  </p>
 </section>
-
-<!-- पात्रता -->
-
-<section class="card" id="eligibility">
-    <h2>✅ सदस्यता आवेदन की योग्यता</h2>
-
-    <p>इस मॉडल जन-पहल से जुड़ने के इच्छुक आवेदकों के लिए प्रस्तावित शर्तें:</p>
-
-    <ol>
-        <li><strong>उम्र:</strong> आवेदन के दिन कम से कम 18 वर्ष पूरे होने चाहिए।</li>
-        <li><strong>शिक्षा:</strong> कम से कम 10वीं कक्षा पास होना अनिवार्य है।</li>
-        <li><strong>जनसेवा:</strong> जनता की समस्याओं को समझने और शांतिपूर्ण तरीके से उठाने की इच्छा हो।</li>
-        <li><strong>ईमानदारी:</strong> आवेदन में सही जानकारी दी जाए।</li>
-        <li><strong>अनुशासन:</strong> प्रस्तावित नियमों और आचार संहिता का पालन किया जाए।</li>
-        <li><strong>कानूनी आचरण:</strong> गैरकानूनी गतिविधियों, हिंसा, धमकी या धोखाधड़ी में भाग न लिया जाए।</li>
-    </ol>
-
-    <div class="notice">
-        बेरोजगार होना अनिवार्य नहीं है। विद्यार्थी, बेरोजगार युवा,
-        नौकरीपेशा व्यक्ति, किसान, मजदूर, कारोबारी और सामाजिक
-        कार्यकर्ता भी अन्य शर्तें पूरी करने पर आवेदन कर सकते हैं।
-        बेरोजगार युवाओं को रोजगार संबंधी गतिविधियों में विशेष
-        भागीदारी देने का प्रस्ताव है।
-    </div>
-
-    <p>
-        शिक्षा और उम्र की जानकारी जरूरत पड़ने पर उचित और सुरक्षित
-        प्रक्रिया से सत्यापित की जा सकती है। आवेदन जमा करना अपने
-        आप स्वीकृति या किसी पद की गारंटी नहीं है।
-    </p>
-</section>
-
-<!-- नियम -->
 
 <section class="card" id="rules">
-    <h2>📜 नियम एवं शर्तें</h2>
+  <h2>📋 पात्रता एवं नियम</h2>
 
-    <h3>1. सामान्य नियम</h3>
-    <ul>
-        <li>आवेदक की उम्र कम से कम 18 वर्ष होनी चाहिए।</li>
-        <li>आवेदक कम से कम 10वीं कक्षा पास हो।</li>
-        <li>एक व्यक्ति को अपनी वास्तविक जानकारी देनी चाहिए।</li>
-        <li>किसी दूसरे व्यक्ति के नाम से बिना अनुमति आवेदन न करें।</li>
-        <li>आवेदन जमा करने के बाद उसकी समीक्षा की जा सकती है।</li>
-        <li>आवेदन ID मिलने का अर्थ यह नहीं है कि आवेदन स्वीकृत हो गया है।</li>
-    </ul>
+  <ul class="purpose-list">
+    <li>आवेदक की आयु कम से कम 18 वर्ष होनी चाहिए।</li>
+    <li>आवेदक ने कम से कम 10वीं कक्षा उत्तीर्ण की होनी चाहिए।</li>
+    <li>वर्तमान में सरकारी नौकरी कर रहे व्यक्ति इस पहल की सदस्यता के लिए पात्र नहीं हैं।</li>
+    <li>आवेदन में सही नाम, मोबाइल नंबर, शिक्षा और रोजगार की जानकारी देना आवश्यक है।</li>
+    <li>आवेदन जमा होने के बाद उसकी समीक्षा की जाएगी; आवेदन जमा होना स्वीकृति नहीं है।</li>
+    <li>सेवानिवृत्त व्यक्ति केवल पूर्व सरकारी नौकरी के कारण स्वतः अपात्र नहीं माने जाएँगे; अन्य नियम लागू हो सकते हैं।</li>
+    <li>किसी भी आवेदक की पात्रता की पुष्टि आवश्यक होने पर अतिरिक्त समीक्षा की जा सकती है।</li>
+  </ul>
 
-    <h3>2. आचार संहिता</h3>
-    <ul>
-        <li>सभी लोगों के साथ सम्मानजनक व्यवहार किया जाए।</li>
-        <li>जाति, धर्म, भाषा, लिंग या समुदाय के आधार पर नफरत न फैलाई जाए।</li>
-        <li>किसी व्यक्ति को धमकी देने, परेशान करने या हिंसा के लिए उकसाने से बचें।</li>
-        <li>झूठी खबरें, फर्जी दस्तावेज या भ्रामक दावे जानबूझकर न फैलाएँ।</li>
-        <li>जनता की समस्याएँ शांतिपूर्ण और कानूनी तरीकों से उठाएँ।</li>
-        <li>पार्टी या जन-पहल के नाम पर अनधिकृत धन वसूली न करें।</li>
-    </ul>
-
-    <h3>3. सदस्यता या पद के लिए समीक्षा</h3>
-    <p>
-        निम्न परिस्थितियों में आवेदन या पद की पात्रता की समीक्षा की
-        जा सकती है:
-    </p>
-    <ul>
-        <li>उम्र या शैक्षणिक योग्यता की शर्त पूरी न होना।</li>
-        <li>जानबूझकर गलत जानकारी या फर्जी दस्तावेज देना।</li>
-        <li>धोखाधड़ी, धमकी, हिंसा या धन के दुरुपयोग से संबंधित प्रमाणित आचरण।</li>
-        <li>संगठन के नाम का दुरुपयोग या अनधिकृत धन संग्रह।</li>
-        <li>आचार संहिता का गंभीर या बार-बार उल्लंघन।</li>
-    </ul>
-
-    <div class="warning">
-        किसी शिकायत या आरोप मात्र के आधार पर किसी को दोषी नहीं माना
-        जाएगा। वास्तविक संगठन में किसी भी अनुशासनात्मक निर्णय से पहले
-        निष्पक्ष समीक्षा, जवाब देने का अवसर और लागू कानून का पालन
-        आवश्यक होगा।
-    </div>
-
-    <h3>4. सेवानिवृत्त न्यायाधीश और सरकारी अधिकारी</h3>
-    <p>
-        सेवानिवृत्त न्यायाधीश, सरकारी अधिकारी और अन्य विशेषज्ञ अपने
-        अनुभव के आधार पर समाज को योगदान दे सकते हैं। उनकी पिछली नौकरी
-        मात्र के कारण उन्हें स्वतः अयोग्य नहीं माना जाएगा।
-    </p>
-    <p>
-        यदि भविष्य में किसी विशेष पद के लिए स्वतंत्रता, निष्पक्षता,
-        हितों के टकराव या सेवा-नियमों से संबंधित शर्त रखी जाती है,
-        तो उसे स्पष्ट रूप से लिखना और लागू कानून के अनुसार तय करना
-        आवश्यक होगा।
-    </p>
-
-    <h3>5. दोहरी सदस्यता और हितों का टकराव</h3>
-    <p>
-        यदि भविष्य में वास्तविक संगठन बनाया जाता है, तो दूसरे संगठनों
-        से जुड़ाव, गोपनीय जानकारी और हितों के टकराव से संबंधित नियम
-        लिखित संविधान और लागू कानून के अनुसार निर्धारित किए जाएँगे।
-    </p>
-
-    <h3>6. नियमों में बदलाव</h3>
-    <p>
-        ये नियम काल्पनिक मॉडल के लिए प्रस्तावित हैं। वास्तविक संगठन
-        बनाने पर इन्हें विधिवत समीक्षा और आवश्यक अनुमोदन के बाद ही
-        लागू किया जाना चाहिए।
-    </p>
+  <div class="warning">
+    <strong>महत्वपूर्ण:</strong>
+    सरकारी कर्मचारियों पर राजनीतिक गतिविधियों से संबंधित सेवा नियम या कानूनी प्रतिबंध लागू हो सकते हैं।
+    YJP की पात्रता नीति और लागू कानून/सेवा नियमों की अलग-अलग जाँच आवश्यक है।
+  </div>
 </section>
-
-<!-- पदाधिकारी चयन -->
-
-<section class="card" id="positions">
-    <h2>🏛️ संगठन में पद और चयन प्रक्रिया</h2>
-
-    <p>भविष्य के मॉडल संगठन में निम्न पद प्रस्तावित किए जा सकते हैं:</p>
-
-    <ul>
-        <li>राष्ट्रीय अध्यक्ष और उपाध्यक्ष।</li>
-        <li>राष्ट्रीय महासचिव और संगठन सचिव।</li>
-        <li>प्रदेश अध्यक्ष और जिला अध्यक्ष।</li>
-        <li>प्रखंड, विधानसभा क्षेत्र और स्थानीय समन्वयक।</li>
-        <li>युवा, महिला, रोजगार और शिक्षा प्रकोष्ठ के संयोजक।</li>
-        <li>जनसमस्या एवं शिकायत प्रकोष्ठ के प्रतिनिधि।</li>
-    </ul>
-
-    <h3>पद पाने के प्रस्तावित मानदंड</h3>
-    <ol>
-        <li>सदस्यता की निर्धारित योग्यता पूरी करना।</li>
-        <li>ईमानदारी और जिम्मेदारी का प्रदर्शन करना।</li>
-        <li>जनता के मुद्दों पर काम करने का अनुभव या क्षमता दिखाना।</li>
-        <li>हितों के टकराव और अनुशासन संबंधी नियमों का पालन करना।</li>
-        <li>पारदर्शी चयन प्रक्रिया और अधिकृत स्वीकृति प्राप्त करना।</li>
-    </ol>
-
-    <div class="notice">
-        किसी पद के लिए केवल आवेदन करने या पहचान कार्ड प्राप्त करने
-        से पदाधिकारी का दर्जा नहीं मिलता। पदों की वास्तविक पात्रता,
-        चयन प्रक्रिया और शैक्षणिक शर्तें अलग से लिखित रूप में तय
-        करनी होंगी।
-    </div>
-</section>
-
-<!-- जनकल्याण नीतियाँ -->
-
-<section class="card" id="policies">
-    <h2>🌱 भविष्य की प्रस्तावित जनकल्याण नीतियाँ</h2>
-
-    <div class="notice">
-        ये काल्पनिक मॉडल संगठन के नीति-प्रस्ताव हैं। इन्हें लागू
-        सरकारी नीतियाँ, स्वीकृत योजनाएँ या किसी वास्तविक सरकार की
-        घोषणाएँ न समझें।
-    </div>
-
-    <h3>1. रोजगार और युवा विकास</h3>
-    <ul>
-        <li>कौशल प्रशिक्षण और रोजगार संबंधी जानकारी को बढ़ावा देना।</li>
-        <li>युवाओं को स्वरोजगार और उद्यमिता की जानकारी देना।</li>
-        <li>नौकरी की तलाश कर रहे युवाओं की समस्याएँ सामने लाना।</li>
-        <li>भर्ती प्रक्रिया में पारदर्शिता और समय पर जानकारी की माँग करना।</li>
-    </ul>
-
-    <h3>2. शिक्षा</h3>
-    <ul>
-        <li>सरकारी स्कूलों में बुनियादी सुविधाओं पर ध्यान देना।</li>
-        <li>विद्यार्थियों को छात्रवृत्ति और शिक्षा योजनाओं की जानकारी देना।</li>
-        <li>डिजिटल शिक्षा और पुस्तकालयों को बढ़ावा देने का प्रयास करना।</li>
-    </ul>
-
-    <h3>3. स्वास्थ्य</h3>
-    <ul>
-        <li>सरकारी अस्पतालों में उपलब्ध सुविधाओं से जुड़ी समस्याएँ उठाना।</li>
-        <li>दवाओं और स्वास्थ्य सेवाओं की उपलब्धता बेहतर करने की माँग करना।</li>
-        <li>स्वास्थ्य योजनाओं के प्रति जागरूकता बढ़ाना।</li>
-    </ul>
-
-    <h3>4. किसान और मजदूर</h3>
-    <ul>
-        <li>किसानों की समस्याओं और कृषि सुविधाओं पर ध्यान देना।</li>
-        <li>मजदूरों को उनके कानूनी अधिकारों की जानकारी देना।</li>
-        <li>सरकारी योजनाओं तक पहुँचने में आने वाली समस्याएँ सामने लाना।</li>
-    </ul>
-
-    <h3>5. भ्रष्टाचार और जवाबदेही</h3>
-    <ul>
-        <li>सरकारी सेवाओं में पारदर्शिता की माँग करना।</li>
-        <li>शिकायत दर्ज करने के कानूनी तरीकों की जानकारी देना।</li>
-        <li>प्रमाणों के आधार पर शिकायतों को उचित अधिकारियों तक पहुँचाने का प्रयास करना।</li>
-    </ul>
-
-    <h3>6. सड़क, पानी और स्वच्छता</h3>
-    <ul>
-        <li>स्थानीय सड़क, पेयजल और सफाई की समस्याओं की जानकारी जुटाना।</li>
-        <li>नागरिकों के सुझावों को संबंधित विभाग तक पहुँचाने का प्रयास करना।</li>
-    </ul>
-
-    <h3>7. महिला सुरक्षा और समान अवसर</h3>
-    <ul>
-        <li>महिलाओं के सम्मान और सुरक्षा के लिए जागरूकता बढ़ाना।</li>
-        <li>शिक्षा, रोजगार और सार्वजनिक सेवाओं तक समान पहुँच को प्रोत्साहित करना।</li>
-    </ul>
-
-    <h3>8. शिकायत और सुझाव व्यवस्था</h3>
-    <p>
-        भविष्य में सुरक्षित शिकायत पोर्टल बनाने का प्रस्ताव है, जहाँ
-        शिकायत की स्थिति देखी जा सके और उचित विभाग से संपर्क करने
-        की जानकारी मिल सके।
-    </p>
-
-    <p>
-        यदि भविष्य में कोई वास्तविक सरकार इन प्रस्तावों को अपनाती है,
-        तो उन्हें लागू करने के लिए कानून, बजट, प्रशासनिक प्रक्रिया
-        और आवश्यक अनुमोदन की जरूरत हो सकती है।
-    </p>
-</section>
-
-<!-- गोपनीयता नीति -->
-
-<section class="card" id="privacy">
-    <h2>🔐 गोपनीयता नीति</h2>
-
-    <ul>
-        <li>आवेदन में केवल आवश्यक जानकारी देने का प्रयास करें।</li>
-        <li>मोबाइल नंबर और अन्य निजी जानकारी सार्वजनिक सूची में नहीं दिखाई जाएगी।</li>
-        <li>आवेदन की जानकारी समीक्षा और आवेदन संबंधी संपर्क के लिए इस्तेमाल करने का प्रस्ताव है।</li>
-        <li>व्यक्तिगत जानकारी को अनावश्यक रूप से सार्वजनिक न किया जाए।</li>
-        <li>जानकारी की सुरक्षा के लिए डेटाबेस के उचित सुरक्षा नियम जरूरी हैं।</li>
-        <li>इस मॉडल वेबसाइट पर संवेदनशील पहचान दस्तावेज अपलोड न करें।</li>
-    </ul>
-
-    <div class="warning">
-        यह एक प्रारंभिक गोपनीयता सूचना है। वास्तविक उपयोग से पहले
-        डेटा संग्रह, उपयोग, रखरखाव, शिकायत और जानकारी हटाने की
-        प्रक्रिया स्पष्ट करके उपयुक्त गोपनीयता नीति प्रकाशित करें।
-    </div>
-</section>
-
-<!-- आवेदन फॉर्म -->
 
 <section class="card" id="join">
-    <h2>📝 ऑनलाइन जुड़ने का आवेदन</h2>
+  <h2>📝 ऑनलाइन आवेदन फॉर्म</h2>
 
-    <div class="notice">
-        आवेदन के लिए कम से कम 18 वर्ष की आयु और 10वीं पास होना
-        अनिवार्य है। आवेदन जमा होने के बाद उसकी समीक्षा होगी।
-        यह काल्पनिक ऑनलाइन जन-पहल का आवेदन है, किसी पंजीकृत
-        राजनीतिक दल की आधिकारिक सदस्यता नहीं।
+  <div class="notice">
+    आवेदन जमा करने के बाद आपको एक आवेदन ID मिलेगी।
+    उसे सुरक्षित रखें। आवेदन की स्थिति इसी ID से देखी जा सकेगी।
+    आवेदन स्वीकृत होने तक पहचान कार्ड उपलब्ध नहीं होगा।
+  </div>
+
+  <form id="joinForm">
+
+    <div>
+      <label for="name">पूरा नाम *</label>
+      <input
+        id="name"
+        name="name"
+        type="text"
+        maxlength="100"
+        autocomplete="name"
+        required
+        placeholder="अपना पूरा नाम लिखें"
+      >
     </div>
 
-    <form id="joinForm">
+    <div>
+      <label for="phone">मोबाइल नंबर *</label>
+      <input
+        id="phone"
+        name="phone"
+        type="tel"
+        inputmode="numeric"
+        pattern="[0-9]{10}"
+        maxlength="10"
+        autocomplete="tel"
+        required
+        placeholder="10 अंकों का मोबाइल नंबर"
+      >
+    </div>
 
-        <div>
-            <label for="name">पूरा नाम *</label>
-            <input id="name" type="text" maxlength="100"
-                   autocomplete="name" required>
-        </div>
+    <div>
+      <label for="dob">जन्म तिथि *</label>
+      <input
+        id="dob"
+        name="dob"
+        type="date"
+        required
+      >
+    </div>
 
-        <div>
-            <label for="phone">10 अंकों का मोबाइल नंबर *</label>
-            <input id="phone" type="tel" inputmode="numeric"
-                   pattern="[0-9]{10}" maxlength="10"
-                   autocomplete="tel-national" required>
-        </div>
+    <div>
+      <label for="education">शिक्षा *</label>
+      <select id="education" name="education" required>
+        <option value="">अपनी शिक्षा चुनें</option>
+        <option value="below10">10वीं से कम</option>
+        <option value="10th">10वीं पास</option>
+        <option value="12th">12वीं पास</option>
+        <option value="graduate">स्नातक</option>
+        <option value="postgraduate">स्नातकोत्तर</option>
+        <option value="other">अन्य</option>
+      </select>
+    </div>
 
-        <div>
-            <label for="dob">जन्मतिथि *</label>
-            <input id="dob" type="date" required>
-            <small>आवेदन के दिन 18 वर्ष पूरे होने चाहिए।</small>
-        </div>
+    <div>
+      <label for="employment">वर्तमान रोजगार स्थिति *</label>
+      <select id="employment" name="employment" required>
+        <option value="">अपनी स्थिति चुनें</option>
+        <option value="student">विद्यार्थी</option>
+        <option value="unemployed">बेरोजगार</option>
+        <option value="private_employee">निजी नौकरी</option>
+        <option value="self_employed">स्वरोजगार / व्यवसाय</option>
+        <option value="farmer">किसान</option>
+        <option value="worker">मजदूर</option>
+        <option value="retired">सेवानिवृत्त</option>
+        <option value="government_employee">वर्तमान सरकारी कर्मचारी</option>
+        <option value="other">अन्य</option>
+      </select>
+    </div>
 
-        <div>
-            <label for="education">शैक्षणिक योग्यता *</label>
-            <select id="education" required>
-                <option value="">योग्यता चुनें</option>
-                <option value="10th">10वीं पास</option>
-                <option value="12th">12वीं पास</option>
-                <option value="graduate">स्नातक</option>
-                <option value="postgraduate">स्नातकोत्तर</option>
-                <option value="other_higher">अन्य उच्च योग्यता</option>
-                <option value="below10">10वीं से कम</option>
-            </select>
-            <small>कम से कम 10वीं पास होना जरूरी है।</small>
-        </div>
+    <div>
+      <label for="state">राज्य / केंद्रशासित प्रदेश *</label>
+      <select id="state" name="state" required>
+        <option value="">अपना राज्य चुनें</option>
 
-        <div>
-            <label for="employment">वर्तमान स्थिति *</label>
-            <select id="employment" required>
-                <option value="">स्थिति चुनें</option>
-                <option value="unemployed">बेरोजगार</option>
-                <option value="student">विद्यार्थी</option>
-                <option value="employed">नौकरीपेशा</option>
-                <option value="selfemployed">स्वरोजगार / कारोबारी</option>
-                <option value="farmer">किसान</option>
-                <option value="worker">मजदूर</option>
-                <option value="other">अन्य</option>
-            </select>
-        </div>
+        <optgroup label="राज्य">
+          <option>आंध्र प्रदेश</option>
+          <option>अरुणाचल प्रदेश</option>
+          <option>असम</option>
+          <option>बिहार</option>
+          <option>छत्तीसगढ़</option>
+          <option>गोवा</option>
+          <option>गुजरात</option>
+          <option>हरियाणा</option>
+          <option>हिमाचल प्रदेश</option>
+          <option>झारखंड</option>
+          <option>कर्नाटक</option>
+          <option>केरल</option>
+          <option>मध्य प्रदेश</option>
+          <option>महाराष्ट्र</option>
+          <option>मणिपुर</option>
+          <option>मेघालय</option>
+          <option>मिजोरम</option>
+          <option>नागालैंड</option>
+          <option>ओडिशा</option>
+          <option>पंजाब</option>
+          <option>राजस्थान</option>
+          <option>सिक्किम</option>
+          <option>तमिलनाडु</option>
+          <option>तेलंगाना</option>
+          <option>त्रिपुरा</option>
+          <option>उत्तर प्रदेश</option>
+          <option>उत्तराखंड</option>
+          <option>पश्चिम बंगाल</option>
+        </optgroup>
 
-        <div>
-            <label for="state">राज्य *</label>
-            <select id="state" required>
-                <option value="">राज्य चुनें</option>
-                <option>आंध्र प्रदेश</option>
-                <option>अरुणाचल प्रदेश</option>
-                <option>असम</option>
-                <option>बिहार</option>
-                <option>छत्तीसगढ़</option>
-                <option>गोवा</option>
-                <option>गुजरात</option>
-                <option>हरियाणा</option>
-                <option>हिमाचल प्रदेश</option>
-                <option>झारखंड</option>
-                <option>कर्नाटक</option>
-                <option>केरल</option>
-                <option>मध्य प्रदेश</option>
-                <option>महाराष्ट्र</option>
-                <option>मणिपुर</option>
-                <option>मेघालय</option>
-                <option>मिजोरम</option>
-                <option>नागालैंड</option>
-                <option>ओडिशा</option>
-                <option>पंजाब</option>
-                <option>राजस्थान</option>
-                <option>सिक्किम</option>
-                <option>तमिलनाडु</option>
-                <option>तेलंगाना</option>
-                <option>त्रिपुरा</option>
-                <option>उत्तर प्रदेश</option>
-                <option>उत्तराखंड</option>
-                <option>पश्चिम बंगाल</option>
-                <option>दिल्ली</option>
-                <option>जम्मू और कश्मीर</option>
-                <option>लद्दाख</option>
-                <option>अन्य केंद्रशासित प्रदेश</option>
-            </select>
-        </div>
+        <optgroup label="केंद्रशासित प्रदेश">
+          <option>अंडमान और निकोबार द्वीपसमूह</option>
+          <option>चंडीगढ़</option>
+          <option>दादरा और नगर हवेली और दमन और दीव</option>
+          <option>दिल्ली</option>
+          <option>जम्मू और कश्मीर</option>
+          <option>लद्दाख</option>
+          <option>लक्षद्वीप</option>
+          <option>पुडुचेरी</option>
+        </optgroup>
+      </select>
+    </div>
 
-        <div>
-            <label for="district">जिला *</label>
-            <input id="district" type="text" maxlength="100" required>
-        </div>
+    <div>
+      <label for="district">जिला *</label>
+      <input
+        id="district"
+        name="district"
+        type="text"
+        maxlength="100"
+        required
+        placeholder="अपने जिले का नाम"
+      >
+    </div>
 
-        <div>
-            <label for="assembly">विधानसभा क्षेत्र</label>
-            <input id="assembly" type="text" maxlength="100">
-        </div>
+    <div>
+      <label for="assembly">विधानसभा क्षेत्र</label>
+      <input
+        id="assembly"
+        name="assembly"
+        type="text"
+        maxlength="100"
+        placeholder="वैकल्पिक"
+      >
+    </div>
 
-        <div>
-            <label for="panchayat">पंचायत / वार्ड</label>
-            <input id="panchayat" type="text" maxlength="100">
-        </div>
+    <div>
+      <label for="panchayat">पंचायत / वार्ड</label>
+      <input
+        id="panchayat"
+        name="panchayat"
+        type="text"
+        maxlength="100"
+        placeholder="वैकल्पिक"
+      >
+    </div>
 
-        <div>
-            <label for="village">गाँव / शहर</label>
-            <input id="village" type="text" maxlength="100">
-        </div>
+    <div>
+      <label for="village">गाँव / शहर</label>
+      <input
+        id="village"
+        name="village"
+        type="text"
+        maxlength="100"
+        placeholder="वैकल्पिक"
+      >
+    </div>
 
-        <div class="full">
-            <label for="reason">जनता के किस मुद्दे पर काम करना चाहते हैं?</label>
-            <textarea id="reason" rows="4" maxlength="500"
-                placeholder="जैसे रोजगार, शिक्षा, स्वास्थ्य, सड़क, पानी या अन्य जनसमस्याएँ"></textarea>
-        </div>
+    <div class="full">
+      <label for="reason">जुड़ने का कारण</label>
+      <textarea
+        id="reason"
+        name="reason"
+        rows="3"
+        maxlength="500"
+        placeholder="आप किस जनहित के मुद्दे पर काम करना चाहते हैं?"
+      ></textarea>
+    </div>
 
-        <div class="full consent">
-            <input type="checkbox" id="eligibilityConsent" required>
-            <label for="eligibilityConsent">
-                मैं घोषणा करता/करती हूँ कि मेरी उम्र कम से कम 18 वर्ष है
-                और मैं कम से कम 10वीं पास हूँ। मेरे द्वारा दी गई जानकारी
-                मेरी जानकारी के अनुसार सही है।
-            </label>
-        </div>
+    <div class="full consent">
+      <input type="checkbox" id="declaration" required>
+      <label for="declaration">
+        मैं घोषणा करता/करती हूँ कि आवेदन में दी गई जानकारी मेरी जानकारी के अनुसार सही है।
+        मैं समझता/समझती हूँ कि वर्तमान सरकारी नौकरी करने पर इस पहल की सदस्यता पात्रता लागू नहीं होगी।
+        गलत जानकारी मिलने पर आवेदन अस्वीकार किया जा सकता है।
+      </label>
+    </div>
 
-        <div class="full consent">
-            <input type="checkbox" id="rulesConsent" required>
-            <label for="rulesConsent">
-                मैंने सदस्यता की योग्यता, नियम एवं शर्तें और आचार संहिता
-                पढ़ ली हैं। मैं इनका पालन करने के लिए सहमत हूँ।
-            </label>
-        </div>
+    <div class="full consent">
+      <input type="checkbox" id="consent" required>
+      <label for="consent">
+        मैं सहमत हूँ कि मेरी जानकारी का उपयोग आवेदन की समीक्षा और मुझसे संपर्क करने के लिए किया जा सकता है।
+      </label>
+    </div>
 
-        <div class="full consent">
-            <input type="checkbox" id="privacyConsent" required>
-            <label for="privacyConsent">
-                मैं सहमत हूँ कि आवेदन की समीक्षा और मुझसे संपर्क करने
-                के लिए दी गई जानकारी का उपयोग किया जा सकता है।
-            </label>
-        </div>
+    <div class="full">
+      <button type="submit" class="btn" id="submitBtn">
+        आवेदन जमा करें
+      </button>
 
-        <div class="full">
-            <button type="submit" class="btn" id="submitBtn">
-                आवेदन जमा करें
-            </button>
-            <p id="formMessage" class="message" role="status"
-               aria-live="polite"></p>
-        </div>
+      <p id="formMessage" class="message" role="status" aria-live="polite"></p>
+    </div>
 
-    </form>
+  </form>
 </section>
-
-<!-- सार्वजनिक सूची -->
 
 <section class="card" id="members">
-    <h2>👥 स्वीकृत आवेदनों की सार्वजनिक सूची</h2>
+  <h2>👥 स्वीकृत आवेदकों की सार्वजनिक सूची</h2>
 
-    <p>
-        इस सूची में स्वीकृत आवेदनों का नाम, आवेदन ID और जिला
-        दिखाया जा सकता है। मोबाइल नंबर और जन्मतिथि यहाँ नहीं दिखाई जाएगी।
-    </p>
+  <p>
+    यहाँ केवल स्वीकृत आवेदकों का नाम, आवेदन ID और जिला दिखाया जाएगा।
+  </p>
 
-    <div class="notice">
-        सार्वजनिक सूची तभी लोड होगी जब Firebase की सुरक्षा सेटिंग
-        स्वीकृत रिकॉर्ड पढ़ने की अनुमति देती हो।
-    </div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>आवेदन ID</th>
+          <th>नाम</th>
+          <th>जिला</th>
+          <th>स्थिति</th>
+        </tr>
+      </thead>
 
-    <div class="table-wrap">
-        <table>
-            <thead>
-                <tr>
-                    <th>आवेदन ID</th>
-                    <th>नाम</th>
-                    <th>जिला</th>
-                    <th>स्थिति</th>
-                </tr>
-            </thead>
-            <tbody id="memberList">
-                <tr><td colspan="4">सूची लोड हो रही है...</td></tr>
-            </tbody>
-        </table>
-    </div>
+      <tbody id="memberList">
+        <tr>
+          <td colspan="4">सूची लोड हो रही है...</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </section>
 
-<!-- आवेदन स्थिति और कार्ड -->
-
 <section class="card" id="status">
-    <h2>🪪 मेरा आवेदन / पहचान कार्ड</h2>
+  <h2>🪪 मेरी आवेदन स्थिति</h2>
 
-    <p>आवेदन की स्थिति देखने के लिए अपनी आवेदन ID दर्ज करें।</p>
+  <p>
+    अपनी आवेदन ID डालकर स्थिति देखें।
+    आवेदन स्वीकृत होने पर आप ऑनलाइन पहचान कार्ड बना सकते हैं।
+  </p>
 
-    <form id="statusForm" style="margin-top:18px">
-        <div class="full">
-            <label for="applicationId">आवेदन ID *</label>
-            <input id="applicationId" type="text" maxlength="100" required>
+  <form id="statusForm" style="margin-top:18px">
+
+    <div class="full">
+      <label for="applicationId">आवेदन ID *</label>
+      <input
+        id="applicationId"
+        name="applicationId"
+        type="text"
+        maxlength="100"
+        required
+        placeholder="अपनी आवेदन ID दर्ज करें"
+      >
+    </div>
+
+    <div class="full">
+      <button type="submit" class="btn" id="statusBtn">
+        स्थिति देखें
+      </button>
+
+      <p id="statusMessage" class="message" role="status" aria-live="polite"></p>
+    </div>
+
+  </form>
+
+  <div id="memberCardWrap">
+
+    <div class="notice">
+      यह YJP की ऑनलाइन जन-पहल का पहचान कार्ड है।
+      यह सरकारी पहचान-पत्र या निर्वाचन आयोग द्वारा जारी आधिकारिक सदस्यता प्रमाणपत्र नहीं है।
+    </div>
+
+    <div class="card-actions" style="margin-bottom:12px">
+      <div style="width:100%;max-width:420px">
+        <label for="memberPhoto">कार्ड के लिए फोटो चुनें (वैकल्पिक)</label>
+        <input id="memberPhoto" type="file" accept="image/*">
+      </div>
+    </div>
+
+    <div class="member-card" id="memberCard">
+
+      <div class="member-card-head">
+        <img
+          src="logo.png"
+          alt="YJP लोगो"
+          onerror="this.style.display='none'"
+        >
+
+        <div>
+          <h3>युवा जनता पार्टी (YJP)</h3>
+          <p>ऑनलाइन जन-पहल पहचान कार्ड</p>
+        </div>
+      </div>
+
+      <div class="member-card-body">
+
+        <img
+          id="cardPhoto"
+          class="member-photo"
+          alt="सदस्य की फोटो"
+          src=""
+          style="display:none"
+        >
+
+        <div class="member-details">
+          <p><strong>नाम:</strong> <span id="cardName"></span></p>
+          <p><strong>आवेदन ID:</strong> <span id="cardId"></span></p>
+          <p><strong>जिला:</strong> <span id="cardDistrict"></span></p>
+          <p><strong>स्थिति:</strong> <span id="cardStatus">स्वीकृत</span></p>
         </div>
 
-        <div class="full">
-            <button type="submit" class="btn">स्थिति देखें</button>
-            <p id="statusMessage" class="message" role="status"
-               aria-live="polite"></p>
-        </div>
-    </form>
-
-    <div id="memberCardSection">
-
-        <div class="notice">
-            यह ऑनलाइन जन-पहल का पहचान कार्ड है। यह सरकारी पहचान-पत्र,
-            चुनाव लड़ने का अधिकार या निर्वाचन आयोग की आधिकारिक
-            सदस्यता का प्रमाण नहीं है।
+        <div class="qr-area">
+          <img id="cardQr" alt="आवेदन ID का QR कोड">
+          <small>आवेदन ID संदर्भ</small>
         </div>
 
-        <div class="photo-upload">
-            <label for="memberPhoto">कार्ड पर फोटो लगाएँ (वैकल्पिक)</label>
-            <input type="file" id="memberPhoto" accept="image/*">
-        </div>
+      </div>
 
-        <div class="member-card" id="memberCard">
-
-            <div class="member-header">
-                <img src="logo.png" alt="YJP Logo">
-                <div>
-                    <h3>युवा जनता पार्टी (YJP)</h3>
-                    <p>ऑनलाइन जन-पहल पहचान कार्ड</p>
-                </div>
-            </div>
-
-            <div class="member-body">
-
-                <img id="cardPhoto" class="member-photo"
-                     alt="आवेदक की फोटो" style="display:none">
-
-                <div class="member-details">
-                    <p><strong>नाम:</strong> <span id="cardName"></span></p>
-                    <p><strong>आवेदन ID:</strong> <span id="cardId"></span></p>
-                    <p><strong>जिला:</strong> <span id="cardDistrict"></span></p>
-                    <p><strong>स्थिति:</strong> <span id="cardStatus">स्वीकृत</span></p>
-                </div>
-
-                <div class="qr-area">
-                    <img id="cardQr" alt="आवेदन ID QR Code">
-                    <small>आवेदन ID</small>
-                </div>
-
-            </div>
-
-            <div class="member-footer">
-                YJP की काल्पनिक ऑनलाइन जन-पहल का पहचान कार्ड।
-                यह सरकारी पहचान-पत्र नहीं है।
-            </div>
-
-        </div>
-
-        <div class="card-actions">
-            <button type="button" class="btn" id="downloadCardBtn">
-                कार्ड डाउनलोड / PDF सेव करें
-            </button>
-        </div>
-
-        <p style="font-size:13px;margin-top:10px">
-            बटन दबाने के बाद प्रिंट विकल्प में
-            “Save as PDF / PDF के रूप में सेव करें” चुनें।
-        </p>
+      <div class="member-card-foot">
+        यह कार्ड केवल YJP की ऑनलाइन जन-पहल के लिए है।
+        यह सरकारी पहचान-पत्र या निर्वाचन आयोग की आधिकारिक सदस्यता का प्रमाण नहीं है।
+      </div>
 
     </div>
+
+    <div class="card-actions">
+      <button type="button" class="btn" id="downloadCardBtn">
+        कार्ड प्रिंट / PDF सेव करें
+      </button>
+    </div>
+
+    <p class="small-note">
+      बटन दबाने पर प्रिंट विंडो खुलेगी।
+      वहाँ “Save as PDF / PDF के रूप में सेव करें” चुनें।
+    </p>
+
+  </div>
 </section>
 
 </main>
 
 <footer>
-    <p><strong>YJP — युवा जनता पार्टी</strong></p>
-    <p>काल्पनिक ऑनलाइन जन-पहल पोर्टल</p>
-    <p><a href="#rules">नियम एवं शर्तें</a> |
-       <a href="#privacy">गोपनीयता नीति</a></p>
-    <p>© <span id="year"></span> YJP</p>
+  <p><strong>YJP — युवा जनता पार्टी</strong></p>
+  <p>ऑनलाइन जन-पहल एवं सदस्यता आवेदन पोर्टल</p>
+  <p>© <span id="year"></span> YJP</p>
 </footer>
 
 <script type="module">
 
-import { initializeApp }
-from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import {
+  initializeApp
+} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
 
 import {
-    getFirestore,
-    collection,
-    addDoc,
-    getDoc,
-    doc,
-    query,
-    where,
-    getDocs,
-    serverTimestamp
-}
-from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+  getFirestore,
+  collection,
+  addDoc,
+  getDoc,
+  doc,
+  query,
+  where,
+  getDocs,
+  serverTimestamp
+} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
 
-/* मौजूदा Firebase कॉन्फ़िगरेशन */
+/* Firebase सेटिंग */
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCT0pjRKKAFzrHu_0WiLIgcqcLwo0DmVrA",
-    authDomain: "yjp-official.firebaseapp.com",
-    projectId: "yjp-official",
-    storageBucket: "yjp-official.firebasestorage.app",
-    messagingSenderId: "231867917087",
-    appId: "1:231867917087:web:198f04bd272eeffc1ec62a",
-    measurementId: "G-YYEXE72XEX"
+  apiKey: "AIzaSyCT0pjRKKAFzrHu_0WiLIgcqcLwo0DmVrA",
+  authDomain: "yjp-official.firebaseapp.com",
+  projectId: "yjp-official",
+  storageBucket: "yjp-official.firebasestorage.app",
+  messagingSenderId: "231867917087",
+  appId: "1:231867917087:web:198f04bd272eeffc1ec62a",
+  measurementId: "G-YYEXE72XEX"
 };
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 document.getElementById("year").textContent =
-    new Date().getFullYear();
+  new Date().getFullYear();
 
 
-/* जन्मतिथि की अधिकतम तारीख आज रखें */
-
-const dobInput = document.getElementById("dob");
-
-const today = new Date();
-const localToday = [
-    today.getFullYear(),
-    String(today.getMonth() + 1).padStart(2, "0"),
-    String(today.getDate()).padStart(2, "0")
-].join("-");
-
-dobInput.max = localToday;
-
-
-/* सही उम्र की जाँच */
+/* आयु की जाँच */
 
 function calculateAge(dateString) {
+  if (!dateString) return -1;
 
-    if (!dateString) return -1;
+  const birthDate = new Date(dateString + "T00:00:00");
+  const today = new Date();
 
-    const birthDate = new Date(dateString + "T00:00:00");
-    const currentDate = new Date();
+  if (Number.isNaN(birthDate.getTime())) return -1;
+  if (birthDate > today) return -1;
 
-    if (Number.isNaN(birthDate.getTime())) return -1;
-    if (birthDate > currentDate) return -1;
+  let age = today.getFullYear() - birthDate.getFullYear();
 
-    let age = currentDate.getFullYear() - birthDate.getFullYear();
+  const monthDifference =
+    today.getMonth() - birthDate.getMonth();
 
-    const monthDifference =
-        currentDate.getMonth() - birthDate.getMonth();
+  if (
+    monthDifference < 0 ||
+    (
+      monthDifference === 0 &&
+      today.getDate() < birthDate.getDate()
+    )
+  ) {
+    age--;
+  }
 
-    if (
-        monthDifference < 0 ||
-        (
-            monthDifference === 0 &&
-            currentDate.getDate() < birthDate.getDate()
-        )
-    ) {
-        age--;
-    }
-
-    return age;
+  return age;
 }
 
 
@@ -1085,349 +959,417 @@ const joinForm = document.getElementById("joinForm");
 const formMessage = document.getElementById("formMessage");
 const submitBtn = document.getElementById("submitBtn");
 
-joinForm.addEventListener("submit", async function(event) {
+joinForm.addEventListener("submit", async (event) => {
 
-    event.preventDefault();
+  event.preventDefault();
 
-    const age = calculateAge(dobInput.value);
+  formMessage.textContent = "";
+  submitBtn.disabled = true;
 
-    if (age < 0) {
-        formMessage.textContent =
-            "कृपया सही जन्मतिथि दर्ज करें।";
+  const name =
+    document.getElementById("name").value.trim();
 
-        formMessage.style.color = "#a33b20";
-        dobInput.focus();
-        return;
-    }
+  const phone =
+    document.getElementById("phone").value.trim();
 
-    if (age < 18) {
-        formMessage.textContent =
-            "आवेदन जमा नहीं हो सकता। आपकी उम्र कम से कम 18 वर्ष होनी चाहिए।";
+  const dob =
+    document.getElementById("dob").value;
 
-        formMessage.style.color = "#a33b20";
-        dobInput.focus();
-        return;
-    }
+  const education =
+    document.getElementById("education").value;
 
-    const education = document.getElementById("education").value;
+  const employment =
+    document.getElementById("employment").value;
 
-    if (
-        !["10th", "12th", "graduate", "postgraduate", "other_higher"]
-        .includes(education)
-    ) {
-        formMessage.textContent =
-            "आवेदन के लिए कम से कम 10वीं पास होना अनिवार्य है।";
+  const state =
+    document.getElementById("state").value;
 
-        formMessage.style.color = "#a33b20";
-        document.getElementById("education").focus();
-        return;
-    }
+  const district =
+    document.getElementById("district").value.trim();
 
-    if (
-        !document.getElementById("eligibilityConsent").checked ||
-        !document.getElementById("rulesConsent").checked ||
-        !document.getElementById("privacyConsent").checked
-    ) {
-        formMessage.textContent =
-            "कृपया सभी जरूरी घोषणाओं और सहमति बॉक्स पर टिक करें।";
+  const assembly =
+    document.getElementById("assembly").value.trim();
 
-        formMessage.style.color = "#a33b20";
-        return;
-    }
+  const panchayat =
+    document.getElementById("panchayat").value.trim();
 
-    formMessage.textContent = "आवेदन भेजा जा रहा है...";
+  const village =
+    document.getElementById("village").value.trim();
+
+  const reason =
+    document.getElementById("reason").value.trim();
+
+
+  /* वर्तमान सरकारी कर्मचारी आवेदन नहीं कर सकते */
+
+  if (employment === "government_employee") {
+
+    formMessage.textContent =
+      "आपकी वर्तमान रोजगार स्थिति के अनुसार आप इस पहल की सदस्यता के लिए पात्र नहीं हैं।";
+
+    formMessage.style.color = "#a33b20";
+    submitBtn.disabled = false;
+    return;
+  }
+
+
+  /* आयु की जाँच */
+
+  const age = calculateAge(dob);
+
+  if (age < 0) {
+
+    formMessage.textContent =
+      "कृपया सही जन्म तिथि दर्ज करें।";
+
+    formMessage.style.color = "#a33b20";
+    submitBtn.disabled = false;
+    return;
+  }
+
+  if (age < 18) {
+
+    formMessage.textContent =
+      "आवेदन के लिए कम से कम 18 वर्ष की आयु आवश्यक है।";
+
+    formMessage.style.color = "#a33b20";
+    submitBtn.disabled = false;
+    return;
+  }
+
+
+  /* 10वीं पास की जाँच */
+
+  const eligibleEducation = [
+    "10th",
+    "12th",
+    "graduate",
+    "postgraduate"
+  ];
+
+  if (!eligibleEducation.includes(education)) {
+
+    formMessage.textContent =
+      "आवेदन के लिए कम से कम 10वीं कक्षा उत्तीर्ण होना आवश्यक है।";
+
+    formMessage.style.color = "#a33b20";
+    submitBtn.disabled = false;
+    return;
+  }
+
+
+  /* घोषणा और सहमति */
+
+  if (
+    !document.getElementById("declaration").checked ||
+    !document.getElementById("consent").checked
+  ) {
+
+    formMessage.textContent =
+      "आगे बढ़ने के लिए दोनों घोषणाओं पर सहमति देना आवश्यक है।";
+
+    formMessage.style.color = "#a33b20";
+    submitBtn.disabled = false;
+    return;
+  }
+
+
+  const formData = {
+
+    name,
+    phone,
+    dob,
+    age,
+    education,
+    employment,
+    state,
+    district,
+    assembly,
+    panchayat,
+    village,
+    reason,
+
+    declarationAccepted: true,
+    consentAccepted: true,
+
+    status: "Pending",
+    createdAt: serverTimestamp()
+  };
+
+
+  try {
+
+    formMessage.textContent =
+      "आपका आवेदन जमा किया जा रहा है...";
+
     formMessage.style.color = "#075b3c";
-    submitBtn.disabled = true;
 
-    const formData = {
-        name: document.getElementById("name").value.trim(),
-        phone: document.getElementById("phone").value.trim(),
-        dob: dobInput.value,
-        education: education,
-        employment: document.getElementById("employment").value,
-        state: document.getElementById("state").value,
-        district: document.getElementById("district").value.trim(),
-        assembly: document.getElementById("assembly").value.trim(),
-        panchayat: document.getElementById("panchayat").value.trim(),
-        village: document.getElementById("village").value.trim(),
-        reason: document.getElementById("reason").value.trim(),
-        status: "Pending",
-        createdAt: serverTimestamp()
-    };
+    const docRef = await addDoc(
+      collection(db, "members"),
+      formData
+    );
 
-    try {
+    formMessage.textContent =
+      "आवेदन सफलतापूर्वक जमा हो गया। आपकी आवेदन ID: " +
+      docRef.id +
+      "। इसे सुरक्षित रखें। आवेदन की स्वीकृति समीक्षा के बाद होगी।";
 
-        const result = await addDoc(
-            collection(db, "members"),
-            formData
-        );
+    formMessage.style.color = "green";
 
-        formMessage.textContent =
-            "आवेदन जमा हो गया! आपकी आवेदन ID: " +
-            result.id +
-            "। इसे सुरक्षित रखें। आवेदन की स्थिति अभी लंबित है।";
+    joinForm.reset();
 
-        formMessage.style.color = "green";
+  } catch (error) {
 
-        joinForm.reset();
+    console.error("Application submission error:", error);
 
-    } catch(error) {
+    formMessage.textContent =
+      "आवेदन जमा नहीं हो पाया। इंटरनेट और Firebase की सेटिंग जाँचें।";
 
-        console.error("Application submission error:", error);
+    formMessage.style.color = "#a33b20";
 
-        formMessage.textContent =
-            "आवेदन जमा नहीं हो पाया। इंटरनेट और Firebase Firestore के नियम जाँचें।";
+  } finally {
 
-        formMessage.style.color = "#a33b20";
-
-    } finally {
-
-        submitBtn.disabled = false;
-
-    }
+    submitBtn.disabled = false;
+  }
 
 });
 
 
 /* आवेदन की स्थिति देखना */
 
-const statusForm = document.getElementById("statusForm");
-const statusMessage = document.getElementById("statusMessage");
-const memberCardSection = document.getElementById("memberCardSection");
+const statusForm =
+  document.getElementById("statusForm");
 
-let currentMember = null;
+const statusMessage =
+  document.getElementById("statusMessage");
 
-statusForm.addEventListener("submit", async function(event) {
+const memberCardWrap =
+  document.getElementById("memberCardWrap");
 
-    event.preventDefault();
+let currentApprovedMember = null;
 
-    memberCardSection.style.display = "none";
-    currentMember = null;
 
-    const appId =
-        document.getElementById("applicationId").value.trim();
+statusForm.addEventListener("submit", async (event) => {
 
-    statusMessage.textContent = "जाँच की जा रही है...";
-    statusMessage.style.color = "#075b3c";
+  event.preventDefault();
 
-    try {
+  memberCardWrap.style.display = "none";
+  currentApprovedMember = null;
 
-        const snapshot = await getDoc(doc(db, "members", appId));
+  const appId =
+    document.getElementById("applicationId").value.trim();
 
-        if (!snapshot.exists()) {
+  if (!appId) return;
 
-            statusMessage.textContent =
-                "यह आवेदन ID नहीं मिली।";
+  statusMessage.textContent = "स्थिति जाँची जा रही है...";
+  statusMessage.style.color = "#075b3c";
 
-            statusMessage.style.color = "#a33b20";
-            return;
+  try {
 
-        }
+    const snap = await getDoc(
+      doc(db, "members", appId)
+    );
 
-        const data = snapshot.data();
+    if (!snap.exists()) {
 
-        if (data.status !== "Approved") {
+      statusMessage.textContent =
+        "इस आवेदन ID का रिकॉर्ड नहीं मिला।";
 
-            statusMessage.textContent =
-                "आपका आवेदन अभी लंबित है या स्वीकृत नहीं हुआ है। स्वीकृति के बाद कार्ड उपलब्ध होगा।";
-
-            statusMessage.style.color = "#d97706";
-            return;
-
-        }
-
-        currentMember = {
-            id: snapshot.id,
-            name: data.name || "",
-            district: data.district || ""
-        };
-
-        document.getElementById("cardName").textContent =
-            currentMember.name;
-
-        document.getElementById("cardId").textContent =
-            currentMember.id;
-
-        document.getElementById("cardDistrict").textContent =
-            currentMember.district;
-
-        document.getElementById("cardStatus").textContent =
-            "स्वीकृत";
-
-        document.getElementById("cardQr").src =
-            "https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=" +
-            encodeURIComponent(
-                "YJP Online Initiative | Application ID: " +
-                currentMember.id
-            );
-
-        document.getElementById("cardPhoto").style.display = "none";
-        document.getElementById("memberPhoto").value = "";
-
-        memberCardSection.style.display = "block";
-
-        statusMessage.textContent =
-            "आपका आवेदन स्वीकृत है। नीचे अपना ऑनलाइन पहचान कार्ड देखें।";
-
-        statusMessage.style.color = "green";
-
-    } catch(error) {
-
-        console.error("Status lookup error:", error);
-
-        statusMessage.textContent =
-            "स्थिति जाँचने में त्रुटि हुई। Firebase सुरक्षा नियम और इंटरनेट जाँचें।";
-
-        statusMessage.style.color = "#a33b20";
-
+      statusMessage.style.color = "#a33b20";
+      return;
     }
+
+    const data = snap.data();
+
+    if (data.status === "Rejected") {
+
+      statusMessage.textContent =
+        "आपका आवेदन अस्वीकृत किया गया है। अधिक जानकारी के लिए संबंधित व्यवस्थापक से संपर्क करें।";
+
+      statusMessage.style.color = "#a33b20";
+      return;
+    }
+
+    const approved = data.status === "Approved";
+
+    statusMessage.textContent =
+      "नाम: " + (data.name || "—") +
+      " | स्थिति: " +
+      (approved ? "स्वीकृत" : "समीक्षाधीन / लंबित");
+
+    statusMessage.style.color =
+      approved ? "green" : "#d97706";
+
+
+    if (approved) {
+
+      currentApprovedMember = {
+        id: snap.id,
+        name: data.name || "",
+        district: data.district || ""
+      };
+
+      document.getElementById("cardName").textContent =
+        currentApprovedMember.name;
+
+      document.getElementById("cardId").textContent =
+        currentApprovedMember.id;
+
+      document.getElementById("cardDistrict").textContent =
+        currentApprovedMember.district;
+
+      document.getElementById("cardStatus").textContent =
+        "स्वीकृत";
+
+      document.getElementById("cardQr").src =
+        "https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=" +
+        encodeURIComponent(
+          "YJP Online Initiative | Application ID: " + snap.id
+        );
+
+      document.getElementById("memberPhoto").value = "";
+
+      document.getElementById("cardPhoto").src = "";
+      document.getElementById("cardPhoto").style.display = "none";
+
+      memberCardWrap.style.display = "block";
+    }
+
+  } catch (error) {
+
+    console.error("Status lookup error:", error);
+
+    statusMessage.textContent =
+      "स्थिति जाँचने में त्रुटि हुई। Firebase नियम और इंटरनेट की जाँच करें।";
+
+    statusMessage.style.color = "#a33b20";
+  }
 
 });
 
 
-/* कार्ड में फोटो लगाना */
+/* कार्ड पर फोटो लगाना */
 
-document.getElementById("memberPhoto").addEventListener(
-    "change",
-    function(event) {
+document
+  .getElementById("memberPhoto")
+  .addEventListener("change", (event) => {
 
-        const file = event.target.files[0];
+    const file =
+      event.target.files && event.target.files[0];
 
-        if (!file) return;
+    if (!file) return;
 
-        if (!file.type.startsWith("image/")) {
+    if (!file.type.startsWith("image/")) {
 
-            alert("कृपया फोटो वाली इमेज चुनें।");
-            event.target.value = "";
-            return;
-
-        }
-
-        if (file.size > 5 * 1024 * 1024) {
-
-            alert("5 MB से छोटी फोटो चुनें।");
-            event.target.value = "";
-            return;
-
-        }
-
-        const reader = new FileReader();
-
-        reader.onload = function() {
-
-            const photo = document.getElementById("cardPhoto");
-
-            photo.src = reader.result;
-            photo.style.display = "block";
-
-        };
-
-        reader.readAsDataURL(file);
-
+      alert("कृपया फोटो वाली इमेज फाइल चुनें।");
+      event.target.value = "";
+      return;
     }
-);
 
+    if (file.size > 5 * 1024 * 1024) {
 
-/* कार्ड PDF में सेव करना */
-
-document.getElementById("downloadCardBtn").addEventListener(
-    "click",
-    function() {
-
-        if (!currentMember) {
-
-            alert("पहले स्वीकृत आवेदन की स्थिति देखें।");
-            return;
-
-        }
-
-        window.print();
-
+      alert("कृपया 5 MB से छोटी फोटो चुनें।");
+      event.target.value = "";
+      return;
     }
-);
+
+    const reader = new FileReader();
+
+    reader.onload = () => {
+
+      const photo =
+        document.getElementById("cardPhoto");
+
+      photo.src = reader.result;
+      photo.style.display = "block";
+    };
+
+    reader.readAsDataURL(file);
+  });
 
 
-/* स्वीकृत आवेदनों की सार्वजनिक सूची */
+/* कार्ड को प्रिंट या PDF सेव करना */
+
+document
+  .getElementById("downloadCardBtn")
+  .addEventListener("click", () => {
+
+    if (!currentApprovedMember) {
+
+      alert(
+        "कार्ड बनाने से पहले स्वीकृत आवेदन की स्थिति देखें।"
+      );
+
+      return;
+    }
+
+    window.print();
+  });
+
+
+/* स्वीकृत आवेदकों की सार्वजनिक सूची */
 
 async function loadApprovedMembers() {
 
-    const memberList = document.getElementById("memberList");
+  const memberList =
+    document.getElementById("memberList");
 
-    try {
+  try {
 
-        const q = query(
-            collection(db, "members"),
-            where("status", "==", "Approved")
-        );
+    const q = query(
+      collection(db, "members"),
+      where("status", "==", "Approved")
+    );
 
-        const results = await getDocs(q);
+    const snapshot = await getDocs(q);
 
-        memberList.replaceChildren();
+    if (snapshot.empty) {
 
-        if (results.empty) {
+      memberList.innerHTML =
+        '<tr><td colspan="4">अभी कोई स्वीकृत आवेदन नहीं है।</td></tr>';
 
-            const row = document.createElement("tr");
-            const cell = document.createElement("td");
-
-            cell.colSpan = 4;
-            cell.textContent = "अभी कोई स्वीकृत आवेदन नहीं है।";
-
-            row.appendChild(cell);
-            memberList.appendChild(row);
-
-            return;
-
-        }
-
-        results.forEach(function(item) {
-
-            const data = item.data();
-            const row = document.createElement("tr");
-
-            const values = [
-                item.id,
-                data.name || "",
-                data.district || "",
-                "स्वीकृत"
-            ];
-
-            values.forEach(function(value, index) {
-
-                const cell = document.createElement("td");
-
-                cell.textContent = value;
-
-                if (index === 3) {
-                    cell.style.color = "green";
-                    cell.style.fontWeight = "bold";
-                }
-
-                row.appendChild(cell);
-
-            });
-
-            memberList.appendChild(row);
-
-        });
-
-    } catch(error) {
-
-        console.error("Public list error:", error);
-
-        memberList.replaceChildren();
-
-        const row = document.createElement("tr");
-        const cell = document.createElement("td");
-
-        cell.colSpan = 4;
-        cell.textContent =
-            "सूची लोड नहीं हो पाई। Firebase सुरक्षा नियम और इंटरनेट जाँचें।";
-
-        row.appendChild(cell);
-        memberList.appendChild(row);
-
+      return;
     }
 
+    memberList.replaceChildren();
+
+    snapshot.forEach((memberDoc) => {
+
+      const member = memberDoc.data();
+
+      const row = document.createElement("tr");
+
+      const values = [
+        memberDoc.id,
+        member.name || "",
+        member.district || "",
+        "स्वीकृत"
+      ];
+
+      values.forEach((value, index) => {
+
+        const cell = document.createElement("td");
+
+        cell.textContent = value;
+
+        if (index === 3) {
+          cell.style.color = "green";
+          cell.style.fontWeight = "bold";
+        }
+
+        row.appendChild(cell);
+      });
+
+      memberList.appendChild(row);
+    });
+
+  } catch (error) {
+
+    console.error("Approved members error:", error);
+
+    memberList.innerHTML =
+      '<tr><td colspan="4">सूची लोड नहीं हो पाई। Firebase नियम और इंटरनेट जाँचें।</td></tr>';
+  }
 }
 
 loadApprovedMembers();
@@ -1435,4 +1377,4 @@ loadApprovedMembers();
 </script>
 
 </body>
-        </html>
+</html>
